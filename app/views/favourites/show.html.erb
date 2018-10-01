@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>House Hunter:</strong>
+  <%= @favourite.house_hunter.name %>
+</p>
+
+<p>
+  <strong>House:</strong>
+  <%= @favourite.house.name %>
+</p>
+
+<%= link_to 'Edit', edit_favourite_path(@favourite) %> |
+<%= link_to 'Back', favourites_path %>

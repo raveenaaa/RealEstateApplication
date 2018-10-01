@@ -1,0 +1,48 @@
+<%= form_with(model: house_hunter, local: true) do |form| %>
+  <% if house_hunter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(house_hunter.errors.count, "error") %> prohibited this house_hunter from being saved:</h2>
+
+      <ul>
+      <% house_hunter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%# ----------------EMAIL---------------%>
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :house_hunter_email %>
+  </div>
+
+  <%# ----------------PASSWORD---------------%>
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password, id: :house_hunter_password%>
+    <%= form.password_field :password_confirmation, id: :house_hunter_password%>
+  </div>
+
+  <%# ----------------HOUSE HUNTER NAME---------------%>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :house_hunter_name %>
+  </div>
+
+  <%# ----------------PHONE---------------%>
+  <div class="field">
+    <%= form.label "Contact Number" %>
+    <%= form.text_field :phone, id: :house_hunter_phone %>
+  </div>
+
+  <%# ----------------PREFERRED---------------%>
+  <div class="field">
+    <%= form.label "Preferred contact" %>
+    <%= form.select :preferred, ['Email', 'Text', 'Phone'], { include_blank: true }, id: :house_hunter_preferred %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

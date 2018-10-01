@@ -1,0 +1,59 @@
+<%= form_with(model: company, local: true) do |form| %>
+  <% if company.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+
+      <ul>
+      <% company.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%# ----------------COMPANY NAME---------------%>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :company_name %>
+  </div>
+
+  <%# ----------------WEBSITE---------------%>
+  <div class="field">
+    <%= form.label :website %>
+    <%= form.text_field :website, id: :company_website %>
+  </div>
+
+  <%# ----------------ADDRESS---------------%>
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :company_address %>
+  </div>
+
+  <%# ----------------SIZE---------------%>
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size, id: :company_size %>
+  </div>
+
+  <%# ----------------YEAR---------------%>
+  <div class="field">
+    <%= form.label "Year of Establishment" %>
+    <%= form.text_field :year, id: :company_year %>
+  </div>
+
+  <%# ----------------REVENUE---------------%>
+  <div class="field">
+    <%= form.label :revenue %>
+    <%= form.text_field :revenue, id: :company_revenue %>
+  </div>
+
+  <%# ----------------SYNOPSIS---------------%>
+  <div class="field">
+    <%= form.label :synopsis %>
+    <%= form.text_area :synopsis, id: :company_synopsis %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

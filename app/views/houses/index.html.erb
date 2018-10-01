@@ -1,0 +1,61 @@
+<% if logged_in? %>
+<p id="notice"><%= notice %></p>
+<h1>Houses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Location</th>
+      <th>Company</th>
+      <th>Area</th>
+      <th>Year</th>
+      <th>Style</th>
+      <th>Price</th>
+      <th>Floors</th>
+      <th>Basement</th>
+      <th>Owner</th>
+      <th>Realtor's Contact</th>
+      <th>Buyers</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @houses.each do |house| %>
+      <tr>
+        <td><%= house.name %></td>
+        <td><%= house.location %></td>
+        <td><%= house.company.name %></td>
+        <td><%= house.area %></td>
+        <td><%= house.year %></td>
+        <td><%= house.style %></td>
+        <td><%= house.price %></td>
+        <td><%= house.floors %></td>
+        <td><%= house.basement %></td>
+        <td><%= house.owner %></td>
+        <td><%= house.realtor.name %></td>
+        <td><%= house.buyers %></td>
+        <td><%= link_to 'Show', house %></td>
+        <td>
+          <% if logged_in? && (session[:role] == 'Admin' || session[:role] == 'Realtor' && current_user.id == house.realtor.id )  %>  <%# Only Logged in Realtor and Admin has access %>
+            <%= link_to 'Edit', edit_house_url(house) %>
+           <%= link_to 'Delete', { method: :delete, data: { confirm: 'Are you sure?' } } %>
+           <%end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<td>
+  <%= link_to "Search Houses", new_search_path %></td>
+  <% if logged_in? %>
+      <%= link_to_if(session[:role] == 'Realtor' || session[:role] == 'Admin', "New House", { :controller => "houses", :action => "new" }) %>
+  <% end %>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  // put your correct path in a string here
+  </script>
+<% end %>

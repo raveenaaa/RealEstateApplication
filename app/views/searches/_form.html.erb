@@ -1,0 +1,42 @@
+<%= form_with(model: search, local: true) do |form| %>
+  <% if search.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(search.errors.count, "error") %> prohibited this search from being saved:</h2>
+
+      <ul>
+      <% search.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location, id: :search_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min_price %>
+    <%= form.text_field :min_price, id: :search_min_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_price %>
+    <%= form.text_field :max_price, id: :search_max_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :min_area %>
+    <%= form.text_field :min_area, id: :search_min_area %>
+  </div>
+
+  <div class="field">
+    <%= form.label :max_area %>
+    <%= form.text_field :max_area, id: :search_max_area %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
