@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6565a8e1-f6fd-4b0e-b4c5-cb015ec33544" name="Default Changelist" comment="Added admin">
-      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/admins.coffee" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/admins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/admins_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/admins_helper.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/admin.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admins/_admin.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admins/_form.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admins/edit.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admins/index.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admins/index.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admins/new.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admins/show.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admins/show.json.jbuilder" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/migrate/20181001232000_create_admins.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/admins_controller_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fixtures/admins.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/admin_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/system/admins_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-    </list>
+    <list default="true" id="6565a8e1-f6fd-4b0e-b4c5-cb015ec33544" name="Default Changelist" comment="Added admin" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,8 +162,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/inquiries_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="46" column="89" lean-forward="true" selection-start-line="46" selection-start-column="89" selection-end-line="46" selection-end-column="89" />
+            <state relative-caret-position="278">
+              <caret line="47" column="69" lean-forward="true" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -499,12 +474,12 @@
       <workItem from="1538412252747" duration="463000" />
       <workItem from="1538412858482" duration="14213000" />
       <workItem from="1538438949177" duration="280000" />
-      <workItem from="1538439767245" duration="5159000" />
+      <workItem from="1538439767245" duration="5920000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66980000" />
+    <option name="totallyTimeSpent" value="67741000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -892,8 +867,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/inquiries_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="46" column="89" lean-forward="true" selection-start-line="46" selection-start-column="89" selection-end-line="46" selection-end-column="89" />
+        <state relative-caret-position="278">
+          <caret line="47" column="69" lean-forward="true" selection-start-line="47" selection-start-column="69" selection-end-line="47" selection-end-column="69" />
         </state>
       </provider>
     </entry>
