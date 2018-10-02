@@ -2,6 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6565a8e1-f6fd-4b0e-b4c5-cb015ec33544" name="Default Changelist" comment="Added admin">
+      <change afterPath="$PROJECT_DIR$/app/assets/javascripts/admins.coffee" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/admins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/admins_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/helpers/admins_helper.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/admin.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admins/_admin.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admins/_form.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admins/edit.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admins/index.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admins/index.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admins/new.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admins/show.html.erb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admins/show.json.jbuilder" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20181001232000_create_admins.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/admins_controller_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/fixtures/admins.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/admin_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/system/admins_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
@@ -169,8 +187,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/inquiries_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+            <state relative-caret-position="255">
+              <caret line="46" column="89" lean-forward="true" selection-start-line="46" selection-start-column="89" selection-end-line="46" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -481,12 +499,12 @@
       <workItem from="1538412252747" duration="463000" />
       <workItem from="1538412858482" duration="14213000" />
       <workItem from="1538438949177" duration="280000" />
-      <workItem from="1538439767245" duration="4685000" />
+      <workItem from="1538439767245" duration="5159000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66506000" />
+    <option name="totallyTimeSpent" value="66980000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -513,10 +531,10 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32941177" />
       <window_info anchor="bottom" id="Database Console" order="7" weight="0.32941177" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32941177" />
-      <window_info anchor="bottom" id="Database Changes" order="10" weight="0.32941177" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49621785" weight="0.42857143" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5015129" side_tool="true" weight="0.32941177" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" sideWeight="0.49924356" visible="true" weight="0.23865546" />
+      <window_info anchor="bottom" id="Database Changes" order="10" sideWeight="0.49924356" weight="0.32941177" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49546143" weight="0.42857143" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.23865546" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -874,8 +892,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/inquiries_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        <state relative-caret-position="255">
+          <caret line="46" column="89" lean-forward="true" selection-start-line="46" selection-start-column="89" selection-end-line="46" selection-end-column="89" />
         </state>
       </provider>
     </entry>
