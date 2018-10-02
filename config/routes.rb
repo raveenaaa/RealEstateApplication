@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :admins
   resources :searches
   root 'sessions#new'
   get    '/signup',  to: 'sessions#redirect'
