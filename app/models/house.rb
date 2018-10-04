@@ -16,4 +16,7 @@ class House < ApplicationRecord
   validates :company_id, :presence => true
   validates :name, :presence => true
 
+  #adding the class of uploader to the model where it needs to be uploaded/shown
+  mount_uploader :image, ImageUploader
+
 end

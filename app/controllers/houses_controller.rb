@@ -25,7 +25,6 @@ class HousesController < ApplicationController
   # POST /houses.json
   def create
     @house = House.includes(:company, :realtor).new(house_params)
-
     respond_to do |format|
       if @house.save
         format.html { redirect_to @house, notice: 'House was successfully created.' }
@@ -69,6 +68,6 @@ class HousesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def house_params
-      params.require(:house).permit(:location, :area, :year, :style, :price, :floors, :basement, :owner, :buyers, :company_id, :realtor_id, :name)
+      params.require(:house).permit(:location, :area, :year, :style, :price, :floors, :basement, :owner, :buyers, :company_id, :realtor_id, :name, :image)
     end
 end

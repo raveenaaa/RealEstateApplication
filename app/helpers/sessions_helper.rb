@@ -9,10 +9,13 @@ module SessionsHelper
       if session[:role]=='Realtor'
       @current_user ||= Realtor.includes(:company).find_by(id: session[:user_id])
         else if session[:role]=='House Hunter'
-      @current_user ||= HouseHunter.find_by(id: session[:user_id])
+                @current_user ||= HouseHunter.find_by(id: session[:user_id])
+             else if session[:role]=='Admin'
+                    @current_user ||= Admin.find_by(id: session[:user_id])
+                  end
+             end
       end
     end
-  end
   end
 
   def logged_in?

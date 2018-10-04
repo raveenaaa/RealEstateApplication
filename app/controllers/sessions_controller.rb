@@ -10,7 +10,10 @@ class SessionsController < ApplicationController
     user = Realtor.find_by(email: params[:session][:email].downcase)
     else if role == 'House Hunter'
       user = HouseHunter.find_by(email: params[:session][:email].downcase)
-         end
+      else if role == 'Admin'
+             user = Admin.find_by(email: params[:session][:email].downcase)
+           end
+      end
     end
 
       if user   #If user exists

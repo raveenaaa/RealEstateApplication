@@ -29,7 +29,7 @@ class RealtorsController < ApplicationController
     respond_to do |format|
       if @realtor.save
         log_in @realtor, "Realtor"
-        flash[:notice]  = 'Welcome @realtor.name!'
+        flash[:notice]  = "Welcome #{@realtor.name}!"
         format.html { redirect_to @realtor }
         format.json { render :show, status: :created, location: @realtor }
       else

@@ -55,6 +55,13 @@
   <%= @house.realtor.phone %>
 </p>
 
+<!--to display the uploaded image -->
+<p>
+  <strong>Image of the House</strong>
+  <%= image_tag @house.image_url.to_s %>
+</p>
+
+
 <p>
   <%= link_to 'View Potential Buyers', '/#' %>
 </p>
