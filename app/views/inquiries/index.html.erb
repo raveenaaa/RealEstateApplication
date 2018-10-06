@@ -22,7 +22,7 @@
         <td><%= inquiry.subject %></td>
         <td><%= inquiry.message %></td>
         <td><%= link_to 'Show', inquiry %></td>
-        <% if session[:role] == 'House Hunter' && inquiry.house_hunter_id == current_user.id || session[:role] == 'Admin'  %>
+        <% unless session[:role] == 'Realtor' %>
         <td><%= link_to 'Edit', edit_inquiry_path(inquiry) %></td>
         <td><%= link_to 'Destroy', inquiry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
@@ -32,7 +32,7 @@
   </tbody>
 </table>
 <br>
-<% if session[:role] == 'House Hunter' && inquiry.house_hunter_id == current_user.id || session[:role] == 'Admin'  %>
+<% unless session[:role] == 'Realtor' %>
 <td><%= link_to 'New Inquiry', new_inquiry_path %></td>
 <% end %>
 <br>
