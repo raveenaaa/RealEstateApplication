@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
 
   def create
     role = params[:session][:role]
-    password = params[:session][:password]
 
     if role == 'Realtor'
     user = Realtor.find_by(email: params[:session][:email].downcase)
@@ -16,19 +15,14 @@ class SessionsController < ApplicationController
       end
     end
 
-      if user   #If user exists
-        if password == user.password    #If password is same
+      if user  && user.authenticate(params[:session][:password])
         log_in user,role
         redirect_to current_user
       else
         flash.now[:danger] = "Invalid email/password"
         render 'new'
         end
-      else
-        flash.now[:danger] = 'Account doesn\'t exist'
-        render 'new'
-    end
-  end
+     end
 
   def destroy
     log_out

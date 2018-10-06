@@ -9,16 +9,13 @@
   </head>
 
   <body>
-  <% if logged_in? %>
-    <%= link_to '<button type="button">Log out</button>'.html_safe, log_out  %>
-   <% end %>
-      <% flash.each do |key, value| %>
+       <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
     <% end %>
     <%= yield %>
   <br>
    <% if logged_in? %>
-    <%= link_to '<button type="button">Log out</button>'.html_safe, log_out %>
+    <%= link_to '<button type="button">Log out</button>'.html_safe, '/logout', method: :delete %>
   <% end %>
     </body>
 </html>

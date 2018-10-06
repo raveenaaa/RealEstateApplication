@@ -15,19 +15,24 @@
 
   <tbody>
     <% @inquiries.each do |inquiry| %>
+  <% if session[:role] == 'Admin' || (session[:role] == 'House Hunter' && inquiry.house_hunter_id == current_user.id) || (session[:role] == 'Realtor' && inquiry.house.company_id == current_user.company_id) %>
       <tr>
         <td><%= inquiry.house_hunter.name%></td>
         <td><%= inquiry.house.name %></td>
         <td><%= inquiry.subject %></td>
         <td><%= inquiry.message %></td>
         <td><%= link_to 'Show', inquiry %></td>
+        <% if session[:role] == 'House Hunter' && inquiry.house_hunter_id == current_user.id || session[:role] == 'Admin'  %>
         <td><%= link_to 'Edit', edit_inquiry_path(inquiry) %></td>
         <td><%= link_to 'Destroy', inquiry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
       </tr>
+  <% end %>
     <% end %>
   </tbody>
 </table>
-
 <br>
-
-<%= link_to 'New Inquiry', new_inquiry_path %>
+<% if session[:role] == 'House Hunter' && inquiry.house_hunter_id == current_user.id || session[:role] == 'Admin'  %>
+<td><%= link_to 'New Inquiry', new_inquiry_path %></td>
+<% end %>
+<br>

@@ -1,9 +1,9 @@
 <% if logged_in? %>
 <p id="notice"><%= notice %></p>
-<h1>Houses</h1>
+  <h1>Houses</h1>
 
-<table>
-  <thead>
+  <table>
+    <thead>
     <tr>
       <th>Name</th>
       <th>Location</th>
@@ -19,11 +19,12 @@
       <th>Buyers</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
 
     <% @houses.each do |house| %>
+    <% if session[:role] == 'Realtor' && current_user.company_id == house.company_id || session[:role] == 'House Hunter' || session[:role] == 'Admin' %>
       <tr>
         <td><%= house.name %></td>
         <td><%= house.location %></td>
@@ -39,22 +40,23 @@
         <td><%= house.buyers %></td>
         <td><%= link_to 'Show', house %></td>
         <td>
-          <% if logged_in? && (session[:role] == 'Admin' || session[:role] == 'Realtor' && current_user.id == house.realtor.id )  %>  <%# Only Logged in Realtor and Admin has access %>
+          <% if logged_in? && ( session[:role] == 'Admin' || session[:role] == 'Realtor' && current_user.id == house.realtor.id)%>  <%# Only Logged in Realtor and Admin has access %>
             <%= link_to 'Edit', edit_house_url(house) %>
-           <%= link_to 'Delete', { method: :delete, data: { confirm: 'Are you sure?' } } %>
-           <%end %>
+            <%= link_to 'Delete', { method: :delete, data: { confirm: 'Are you sure?' } } %>
+          <%end %>
         </td>
       </tr>
     <% end %>
-  </tbody>
-</table>
-<br>
-<td>
-  <%= link_to "Search Houses", new_search_path %></td>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <td>
+    <%= link_to "Search Houses", new_search_path %></td>
   <% if logged_in? %>
-      <%= link_to_if(session[:role] == 'Realtor' || session[:role] == 'Admin', "New House", { :controller => "houses", :action => "new" }) %>
-  <% end %>
-<% else %>
+    <%= link_to_if(session[:role] == 'Realtor' || session[:role] == 'Admin', "New House", { :controller => "houses", :action => "new" }) %>
+    <% end %>
+  <% else %>
   <script type="text/javascript">
       window.location.href="/login"  // put your correct path in a string here
   </script>

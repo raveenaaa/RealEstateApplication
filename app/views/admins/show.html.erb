@@ -10,27 +10,21 @@
   <%= @admin.email %>
 </p>
 
-<p>
-  <strong>Password:</strong>
-  <%= @admin.password %>
-</p>
-
-
-<br><br>
+<br>
 <h2>Companies Functionalities</h2>
-<%= link_to 'List Companies',  controller: "companies", action: "create", id: @companies %>
+<%= link_to 'List Companies',  controller: "companies", action: "index", id: @companies %>
 <br><br><%= link_to '<button type="button">Create Company</button>'.html_safe, new_company_path %>
 <%#= link_to 'New Company', new_company_path %>
 
 <br><br>
 <h2>Realtor Functionalities</h2>
-<%= link_to 'List Realtors',  controller: "realtors", action: "create", id: @realtors  %>
+<%= link_to 'List Realtors',  controller: "realtors", action: "index", id: @realtors  %>
 <br><br><%= link_to '<button type="button">Create Realtor</button>'.html_safe, new_realtor_path %>
 
 
 <br><br>
 <h2>House Hunter Functionalities</h2>
-<%= link_to 'List House Hunters',  controller: "house_hunters", action: "create", id: @house_hunters  %>
+<%= link_to 'List House Hunters',  controller: "house_hunters", action: "index", id: @house_hunters  %>
 <br><br><%= link_to '<button type="button">Create House Hunter</button>'.html_safe, new_house_hunter_path %>
 
 <br><br>

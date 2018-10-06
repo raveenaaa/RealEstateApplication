@@ -58,6 +58,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Carrierwave gem
 gem 'carrierwave'
-
+gem 'bcrypt', '3.1.12'
 # #rmagick to resize the image
-# gem 'rmagick'
+#gem 'rmagick'
