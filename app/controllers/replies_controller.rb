@@ -15,6 +15,7 @@ class RepliesController < ApplicationController
   # GET /replies/new
   def new
     @reply = Reply.new
+    session[:inquiry_id] = params[:inquiry_id]
   end
 
   # GET /replies/1/edit
@@ -24,11 +25,19 @@ class RepliesController < ApplicationController
   # POST /replies
   # POST /replies.json
   def create
-    @reply = Reply.new(reply_params)
+    val = reply_params
+    val[:inquiry_id] = session[:inquiry_id]
+    session.delete :inquiry_id
+    if session[:role] == 'Admin'
+      val[:realtor_id] = Realtor.find_by(email: current_user.email).id
+    else
+    val[:realtor_id] = current_user.id
+    end
+    @reply = Reply.includes(:inquiry, :realtor).new(val)
 
     respond_to do |format|
       if @reply.save
-        format.html { redirect_to @reply, notice: 'Reply was successfully created.' }
+        format.html { redirect_to @reply, notice: "Reply created" }
         format.json { render :show, status: :created, location: @reply }
       else
         format.html { render :new }

@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
+  get 'favourites/potential_buyers/:house_id', to: 'favourites#potential_buyers'
+  get 'favourites/add/:house_hunter_id/:house_id', to: 'favourites#add'
   resources :admins
   resources :names
   resources :searches
-  root 'sessions#new'
-  get    '/signup',  to: 'sessions#redirect'
-  get    '/login',   to: 'sessions#new'
-  post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
-
   resources :favourites
   resources :inquiries
   resources :houses
@@ -15,5 +11,13 @@ Rails.application.routes.draw do
   resources :realtors
   resources :companies
   resources :replies
+  root 'sessions#new'
+  get    '/signup',  to: 'sessions#redirect'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+  get 'searches/index'
+  get 'search/index'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

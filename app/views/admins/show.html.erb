@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @admin.name %>
@@ -14,13 +13,16 @@
 <h2>Companies Functionalities</h2>
 <%= link_to 'List Companies',  controller: "companies", action: "index", id: @companies %>
 <br><br><%= link_to '<button type="button">Create Company</button>'.html_safe, new_company_path %>
-<%#= link_to 'New Company', new_company_path %>
+
+<br><br>
+<h2>Houses Functionalities</h2>
+<%= link_to 'View Houses', houses_path %>
+<br><br><%= link_to '<button type="button">New House</button>'.html_safe, new_house_path %>
 
 <br><br>
 <h2>Realtor Functionalities</h2>
 <%= link_to 'List Realtors',  controller: "realtors", action: "index", id: @realtors  %>
 <br><br><%= link_to '<button type="button">Create Realtor</button>'.html_safe, new_realtor_path %>
-
 
 <br><br>
 <h2>House Hunter Functionalities</h2>
@@ -28,20 +30,6 @@
 <br><br><%= link_to '<button type="button">Create House Hunter</button>'.html_safe, new_house_hunter_path %>
 
 <br><br>
-<h2>Houses Functionalities</h2>
-<%= link_to 'View Houses', houses_path %>
-<br><br><%= link_to '<button type="button">New House</button>'.html_safe, new_house_path %>
 
+<%= link_to 'Edit', edit_admin_path(@admin) %>
 
-<br><br>
-<h2>Inquiries Functionalitites</h2>
-<%= link_to 'View Inquiries', inquiries_path %>
-<br><br><%= link_to '<button type="button">New Inquiry</button>'.html_safe, new_inquiry_path %>
-
-<%#= link_to 'View Houses', houses_path %>
-<br><br>
-<%#= link_to 'View Inquiries', inquiries_path %>
-
-
-<%= link_to 'Edit', edit_admin_path(@admin) %> |
-<%#= link_to 'Back', admins_path %>

@@ -61,9 +61,10 @@
   <%= image_tag @house.image_url.to_s %>
 </p>
 
-
 <p>
-  <%= link_to 'View Potential Buyers', '/#' %>
+  <% unless session[:role] == 'House Hunter'%>
+    <%= link_to 'Potential Buyers', "/favourites/potential_buyers/#{@house.id}"  %>
+    <% end %>
 </p>
 
 <%= link_to 'Edit', edit_house_path(@house) %> |

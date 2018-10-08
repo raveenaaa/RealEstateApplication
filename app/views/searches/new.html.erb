@@ -1,20 +1,20 @@
 <h1>Search Houses</h1>
-
 <%= form_for @search do |f| %>
 
   <div class="field">
     <%= f.label :location %><br />
     <%= f.text_field :location %>
   </div>
+
   <div class="field">
-    <%= f.label :min_price, "Price Range" %><br />
-    <%= f.text_field :min_price, size: 10 %> -
-    <%= f.text_field :max_price, size: 10 %>
+    <p><%= f.label :min_price, "Min Price" %> - <%= f.text_field :min_price, size: 10  %></p>
+    <p><%= f.label :max_price, "Max Price" %> - <%= f.text_field :max_price, size: 10  %></p>
   </div>
+
   <div class="field">
-    <%= f.label :min_area, "Area Range" %><br />
-    <%= f.text_field :min_area, size: 10 %> -
-    <%= f.text_field :max_area, size: 10 %>
+    <p><%= f.label :min_area, "Min Area" %> - <%= f.text_field :min_area, size: 10  %></p>
+    <p><%= f.label :max_area, "Max Area" %> - <%= f.text_field :max_area, size: 10  %></p>
   </div>
-  <div class="actions"><%= f.submit "Search" %></div>
+  <div class="actions"><%= f.submit "Search", class: "pure-button pure-button-primary" %></div>
 <% end %>
+<p><%= link_to 'Back', houses_path %></p>

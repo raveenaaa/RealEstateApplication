@@ -1,3 +1,27 @@
 <h1>Search Results</h1>
 
-<%= render @search.house %>
+<p><%= link_to 'Back', new_search_path  %></p>
+<% if @search.search_houses.empty? %>
+  <p> No records found</p>
+<% else %>
+  <% @search.search_houses.each do |c| %>
+    <br>
+
+    <div class="div">
+      <h1><%= c.name %></h1>
+      <%= link_to 'Favourite', "/favourites/add/#{current_user.id}/#{c.id}"%>
+      <%#= link_to 'Favourite', 'new_search_path'%>
+      <p>location: <%= c.location %></p>
+      <p>Company: <%= c.company.name %></p>
+      <p> Area: <%= c.area %></p>
+      <p> Area: <%= c.area %></p>
+      <p>Year: <%= c.year %></p>
+      <p>Style: <%= c.style %></p>
+      <p>Price: $<%= c.price %></p>
+      <p>Floors: <%= c.floors %></p>
+      <p>Basement: <%= c.basement %></p>
+      <p>Owner: <%= c.owner %></p>
+      <p>Realtor's contact: <%= c.realtor.phone %></p>
+    </div>
+  <% end %>
+<% end %>

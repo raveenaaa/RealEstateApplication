@@ -1,14 +1,12 @@
 class SearchesController < ApplicationController
-  def index
-    @searches = Search.all
-  end
+
   def new
     @search = Search.new
+    #@categories = House.uniq.pluck(:category)
   end
 
   def create
-    @search = Search.new(search_params)
-    @search.save
+    @search = Search.create(search_params)
     redirect_to @search
   end
 

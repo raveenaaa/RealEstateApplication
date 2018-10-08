@@ -23,8 +23,8 @@ module SessionsHelper
   end
 
   def log_out
-    cookies.delete :user_id
-    cookies.delete :role
+    session.delete :user_id
+    session.delete :role
     @current_user = nil
   end
 

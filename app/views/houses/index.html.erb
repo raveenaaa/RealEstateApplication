@@ -40,10 +40,14 @@
         <td><%= house.buyers %></td>
         <td><%= link_to 'Show', house %></td>
         <td>
-          <% if logged_in? && ( session[:role] == 'Admin' || session[:role] == 'Realtor' && current_user.id == house.realtor.id)%>  <%# Only Logged in Realtor and Admin has access %>
+          <% unless session[:role] == 'House Hunter'%>  <%# Only Logged in Realtor and Admin has access %>
             <%= link_to 'Edit', edit_house_url(house) %>
             <%= link_to 'Delete', { method: :delete, data: { confirm: 'Are you sure?' } } %>
+            <%= link_to 'Potential Buyers', "/favourites/potential_buyers/#{house.id}"  %>
           <%end %>
+          <% if session[:role] == 'House Hunter' %>
+            <%= link_to 'Favourite', "/favourites/add/#{current_user.id}/#{house.id}"%>
+            <% end %>
         </td>
       </tr>
     <% end %>
@@ -53,8 +57,8 @@
   <br>
   <td>
     <%= link_to "Search Houses", new_search_path %></td>
-  <% if logged_in? %>
-    <%= link_to_if(session[:role] == 'Realtor' || session[:role] == 'Admin', "New House", { :controller => "houses", :action => "new" }) %>
+  <% if session[:role] == 'Realtor' || session[:role] == 'Admin' %>
+    <%= link_to "New House", { :controller => "houses", :action => "new" } %>
     <% end %>
   <% else %>
   <script type="text/javascript">

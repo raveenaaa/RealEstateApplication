@@ -1,9 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>From:</strong>
+  <%= @reply.realtor.name %>
+</p>
+
+<p>
   <strong>Message:</strong>
   <%= @reply.message %>
 </p>
 
 <%= link_to 'Edit', edit_reply_path(@reply) %> |
-<%= link_to 'Back', replies_path %>
+<%= link_to 'Back', inquiries_path %>

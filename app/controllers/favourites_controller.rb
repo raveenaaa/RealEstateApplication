@@ -21,14 +21,31 @@ class FavouritesController < ApplicationController
   def edit
   end
 
-  # POST /favourites
+  def potential_buyers
+    @favourites = Favourite.where("house_id == ? " , "#{params[:house_id]}")
+  end
+
+   # POST /favourites
   # POST /favourites.json
   def create
-    @favourite = Favourite.new(favourite_params).includes(:house, :house_hunter)
+     @favourite = Favourite.includes(:house, :house_hunter).new(favourite_params)
 
     respond_to do |format|
       if @favourite.save
         format.html { redirect_to @favourite, notice: 'Favourite was successfully created.' }
+        format.json { render :show, status: :created, location: @favourite }
+      else
+        format.html { render :new }
+        format.json { render json: @favourite.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def add
+    @favourite = Favourite.includes(:house, :house_hunter).new(house_hunter_id: params[:house_hunter_id] , house_id: params[:house_id])
+    respond_to do |format|
+      if @favourite.save
+        format.html { redirect_to new_search_path, notice: 'Favourite was successfully created.' }
         format.json { render :show, status: :created, location: @favourite }
       else
         format.html { render :new }
@@ -69,7 +86,7 @@ class FavouritesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def favourite_params
-      params.fetch(:favourite, :house_hunter_id, :house_id)
-     # params.require(:favourite).permit(:house_hunter_id, :house_id)
+     params.fetch(:favourite, :house_hunter_id, :house_id)
+      #params.require(:favourite).permit(:house_hunter_id, :house_id)
     end
 end

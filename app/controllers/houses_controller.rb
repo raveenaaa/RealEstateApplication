@@ -4,7 +4,15 @@ class HousesController < ApplicationController
   # GET /houses
   # GET /houses.json
   def index
-    @houses = House.all
+    #@houses = House.all
+    @houses = House.where(nil) # creates an anonymous scope
+    @houses = @houses.location(params[:location]) if params[:location].present?
+    @houses = @houses.price(params[:price]) if params[:price].present?
+    @houses = @houses.area(params[:area]) if params[:area].present?
+  end
+
+  def change
+
   end
 
   # GET /houses/1
