@@ -1,15 +1,11 @@
 class AdminsController < ApplicationController
-  before_action :set_admin, only: [:show, :edit, :update, :destroy]
-
-  # GET /admins
-  # GET /admins.json
-  def index
-    @admins = Admin.all
-  end
+  before_action :set_admin, only: [:show, :edit, :update]
 
   # GET /admins/1
   # GET /admins/1.json
   def show
+    @realtor = Realtor.find_by(id: current_user.id)
+    @house_hunter = HouseHunter.find_by(id: current_user.id)
   end
 
   # GET /admins/new
@@ -51,17 +47,7 @@ class AdminsController < ApplicationController
     end
   end
 
-  # DELETE /admins/1
-  # DELETE /admins/1.json
-  # def destroy
-  #   @admin.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to admins_url, notice: 'Admin was successfully destroyed.' }
-  #     format.json { head :no_content }
-  #   end
-  # end
-
-  private
+   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin
       @admin = Admin.find(params[:id])

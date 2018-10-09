@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'favourites/potential_buyers/:house_id', to: 'favourites#potential_buyers'
   get 'favourites/add/:house_hunter_id/:house_id', to: 'favourites#add'
+  get '/home', to: 'static_pages#home'
   resources :admins
   resources :names
   resources :searches
@@ -11,7 +12,7 @@ Rails.application.routes.draw do
   resources :realtors
   resources :companies
   resources :replies
-  root 'sessions#new'
+  root 'static_pages#home'
   get    '/signup',  to: 'sessions#redirect'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

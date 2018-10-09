@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -34,6 +35,11 @@
   <strong>Synopsis:</strong>
   <%= @company.synopsis %>
 </p>
-
-<%= link_to 'Edit', edit_company_path(@company) %> |
-<%= link_to 'Back', companies_path %>
+<% if session[:role] == 'Admin' || session[:role] == 'Realtor' && current_user.company_id == @company.id  %>
+<%= link_to 'Edit', edit_company_path(@company) %>
+  <% end %>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  // put your correct path in a string here
+  </script>
+<% end %>

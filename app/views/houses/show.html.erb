@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -66,6 +67,12 @@
     <%= link_to 'Potential Buyers', "/favourites/potential_buyers/#{@house.id}"  %>
     <% end %>
 </p>
-
-<%= link_to 'Edit', edit_house_path(@house) %> |
+<% if session[:role] == 'Admin' || session[:role] == 'Realtor' && current_user.company_id == @house.company_id%>
+<%= link_to 'Edit', edit_house_path(@house) %>
+    <% end %>
 <%= link_to 'Back', houses_path %>
+  <% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  //Redirect to login for unlogged in users
+  </script>
+<% end %>

@@ -1,6 +1,12 @@
+<% if logged_in? %>
+
 <h1>Editing Admin</h1>
 
 <%= render 'form', admin: @admin %>
 
 <%= link_to 'Show', @admin %> |
-<%#= link_to 'Back', admins_path %>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  // put your correct path in a string here
+  </script>
+<% end %>

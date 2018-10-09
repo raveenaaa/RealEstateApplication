@@ -1,3 +1,4 @@
+<% if logged_in?  && session[:role] == 'Admin'%>
 <p id="notice"><%= notice %></p>
 <p>
   <strong>Name:</strong>
@@ -8,28 +9,33 @@
   <strong>Email:</strong>
   <%= @admin.email %>
 </p>
-
+  <%= link_to 'Edit', edit_admin_path(@admin) %>
+  <br>
+  <br>
 <br>
-<h2>Companies Functionalities</h2>
+<h2>Manage Companies</h2>
 <%= link_to 'List Companies',  controller: "companies", action: "index", id: @companies %>
 <br><br><%= link_to '<button type="button">Create Company</button>'.html_safe, new_company_path %>
 
 <br><br>
-<h2>Houses Functionalities</h2>
+<h2>Manage Houses</h2>
 <%= link_to 'View Houses', houses_path %>
 <br><br><%= link_to '<button type="button">New House</button>'.html_safe, new_house_path %>
 
 <br><br>
-<h2>Realtor Functionalities</h2>
+<h2>Manage Realtors</h2>
 <%= link_to 'List Realtors',  controller: "realtors", action: "index", id: @realtors  %>
 <br><br><%= link_to '<button type="button">Create Realtor</button>'.html_safe, new_realtor_path %>
+<br><br><%= link_to '<button type="button">Realtor\'s account</button>'.html_safe, @realtor%>
 
 <br><br>
 <h2>House Hunter Functionalities</h2>
 <%= link_to 'List House Hunters',  controller: "house_hunters", action: "index", id: @house_hunters  %>
 <br><br><%= link_to '<button type="button">Create House Hunter</button>'.html_safe, new_house_hunter_path %>
-
+<br><br><%= link_to '<button type="button">House Hunter\'s account</button>'.html_safe, @house_hunter%>
 <br><br>
-
-<%= link_to 'Edit', edit_admin_path(@admin) %>
-
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  // put your correct path in a string here
+  </script>
+<% end %>

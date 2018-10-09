@@ -10,6 +10,7 @@ class RealtorsController < ApplicationController
   # GET /realtors/1
   # GET /realtors/1.json
   def show
+    @realtor = Realtor.find_by(email: current_user.email)
   end
 
   # GET /realtors/new
@@ -29,8 +30,8 @@ class RealtorsController < ApplicationController
     respond_to do |format|
       if @realtor.save
         log_in @realtor, "Realtor"
-        flash[:notice]  = "Welcome #{@realtor.name}!"
-        format.html { redirect_to @realtor }
+        flash[:notice] = "Welcome #{@realtor.name}!"
+        format.html { redirect_to @realtor  }
         format.json { render :show, status: :created, location: @realtor }
       else
         format.html { render :new }

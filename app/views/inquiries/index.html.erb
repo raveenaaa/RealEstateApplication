@@ -1,7 +1,7 @@
+<% if logged_in? %>
 <p id="notice"><%= notice %></p>
 
 <h1>Inquiries</h1>
-
     <% @inquiries.each do |inquiry| %>
   <% if session[:role] == 'Admin' || (session[:role] == 'House Hunter' && inquiry.house_hunter_id == current_user.id) || (session[:role] == 'Realtor' && inquiry.house.company_id == current_user.company_id) %>
        <p>
@@ -17,9 +17,9 @@
          <strong>Inquiry: </strong> <%= inquiry.message %>
         </p>
 
-
         <% unless session[:role] == 'Realtor' %>
-            <% unless @replies.where(inquiry_id: inquiry.id).nil? %>
+
+        <% unless @replies.where(inquiry_id: inquiry.id).nil? %>
               <a href="#" id="toggler">View/Hide Replies</a>
         <div id="toggled" class="hidden">
         <% @replies.where(inquiry_id: inquiry.id).each do |reply| %>
@@ -45,6 +45,11 @@
 <%= link_to 'New Inquiry', new_inquiry_path %>
 <% end %>
 <br>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  //Redirect to login for unlogged in users
+  </script>
+<% end %>
 <script>
     $(document).ready(function(){
         $("#toggler").click(function(){

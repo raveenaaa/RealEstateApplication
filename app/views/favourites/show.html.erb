@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
+<% if logged_in?  %>
 
+<p id="notice"><%= notice %></p>
 <p>
   <strong>House Hunter:</strong>
   <%= @favourite.house_hunter.name %>
@@ -9,6 +10,9 @@
   <strong>House:</strong>
   <%= @favourite.house.name %>
 </p>
-
-<%= link_to 'Edit', edit_favourite_path(@favourite) %> |
 <%= link_to 'Back', favourites_path %>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  //Redirect to login for unlogged in users
+  </script>
+<% end %>
