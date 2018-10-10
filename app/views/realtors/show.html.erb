@@ -25,7 +25,13 @@
   <strong>Company:</strong>
   <%= @realtor.company.name %>
 </p>
-<%= link_to 'Edit Profile', edit_realtor_path(@current_user) %> |
+<%= link_to 'Edit Profile', edit_realtor_path(@current_user) %>
+<br>
+ <%= link_to 'View Houses', houses_path %><br>
+ <%= link_to 'New House', new_house_path %><br>
+  <%= link_to 'View Inquiries', inquiries_path %>
+    <br>
+    <%= link_to '' %>
   <% end %>
 <% else %>
   <script type="text/javascript">

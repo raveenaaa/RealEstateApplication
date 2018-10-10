@@ -13,8 +13,9 @@
   <strong>Message:</strong>
   <%= @inquiry.message %>
 </p>
-
-<%= link_to 'Edit', edit_inquiry_path(@inquiry) %> |
+    <% unless session[:role] == 'Realtor' %>
+<%= link_to 'Edit', edit_inquiry_path(@inquiry) %>
+      <% end %>
 <%= link_to 'Back', current_user %>
 <% else %>
     <% if session[:role] == 'Realtor' %>

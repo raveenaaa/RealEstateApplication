@@ -11,6 +11,7 @@ class RepliesController < ApplicationController
   # GET /replies/1.json
   def show
     @realtor = Realtor.find_by(email: current_user.email)
+    @inquiry = Inquiry.find_by(id: params[:inquiry])
   end
 
   # GET /replies/new
@@ -30,7 +31,7 @@ class RepliesController < ApplicationController
   # POST /replies.json
   def create
     val = reply_params
-    val[:inquiry_id] = @inquiry.id
+    val[:inquiry_id] = session[:inquiry_id]
     session.delete :inquiry_id
     val[:realtor_id] = current_user.id
     @reply = Reply.includes(:inquiry, :realtor).new(val)

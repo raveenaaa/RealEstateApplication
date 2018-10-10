@@ -16,7 +16,6 @@
       <th>Basement</th>
       <th>Owner</th>
       <th>Realtor's Contact</th>
-      <th>Buyers</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -36,16 +35,17 @@
         <td><%= house.floors %></td>
         <td><%= house.basement %></td>
         <td><%= house.owner %></td>
-        <td><%= house.realtor.name %></td>
-        <td><%= house.buyers %></td>
+        <td><%= house.realtor.phone %></td>
         <td><%= link_to 'Show', house %></td>
         <td>
           <% unless session[:role] == 'House Hunter'%>  <%# Only Logged in Realtor and Admin has access %>
-            <%= link_to 'Edit', edit_house_url(house) %>
-            <%= link_to 'Delete', { method: :delete, data: { confirm: 'Are you sure?' } } %>
             <%= link_to 'Potential Buyers', "/favourites/potential_buyers/#{house.id}"  %>
+            <% if house.realtor_id == current_user.id %>
+            <%= link_to 'Edit', edit_house_url(house) %>
+            <%= link_to 'Delete', house, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <% end %>
           <%end %>
-          <% if session[:role] == 'House Hunter' %>
+          <% if session[:role] == 'House Hunter' || session[:role] == 'Admin' %>
             <%= link_to 'Favourite', "/favourites/add/#{current_user.id}/#{house.id}"%>
             <% end %>
         </td>

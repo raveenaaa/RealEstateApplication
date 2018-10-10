@@ -23,6 +23,9 @@ class HousesController < ApplicationController
   # GET /houses/new
   def new
     @house = House.new
+    if session[:role] == 'Realtor'
+    @company = Company.find_by(id: current_user.company_id)
+      end
   end
 
   # GET /houses/1/edit
@@ -32,6 +35,10 @@ class HousesController < ApplicationController
   # POST /houses
   # POST /houses.json
   def create
+    val = house_params
+    if session[:role] == 'Realtor'
+    val[:company_id] = current_user.company_id
+    end
     @house = House.includes(:company, :realtor).new(house_params)
     respond_to do |format|
       if @house.save
