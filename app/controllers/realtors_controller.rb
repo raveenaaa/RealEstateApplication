@@ -36,16 +36,18 @@ class RealtorsController < ApplicationController
     end
     respond_to do |format|
       if @realtor.save
+        unless logged_in?
         log_in @realtor, "Realtor"
-        flash[:notice] = "Welcome #{@realtor.name}!"
-        format.html { redirect_to @realtor  }
+          flash[:notice] = "Welcome #{@realtor.name}"
+        end
+        format.html { redirect_to @current_user  }
         format.json { render :show, status: :created, location: @realtor }
-      else
+       else
         format.html { render :new }
         format.json { render json: @realtor.errors, status: :unprocessable_entity }
       end
     end
-  end
+    end
 
   # PATCH/PUT /realtors/1
   # PATCH/PUT /realtors/1.json

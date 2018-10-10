@@ -48,16 +48,12 @@
   </div>
 
   <br><br>
-  <!--<h2>Manage Realtors</h2>-->
-<%#= link_to 'List Realtors',  controller: "realtors", action: "index", id: @realtors  %>
-  <!--<br><br><%#= link_to '<button type="button">Create Realtor</button>'.html_safe, new_realtor_path %>-->
-  <!--<br><br><%#= link_to '<button type="button">Realtor\'s account</button>'.html_safe, @realtor%>-->
 
   <div class="container">
     <div class="col-md-6 col-md-offset-3">
       <div class="row center form">
         <h1>Manage Realtors</h1>
-        <%= link_to 'List Realtors', realtor_path, class: 'btn btn-success', style: 'color:#FFFFFF;'%><br><br>
+        <%= link_to 'List Realtors', realtors_path, class: 'btn btn-success', style: 'color:#FFFFFF;'%><br><br>
         <%= link_to 'New Realtor', new_realtor_path, class: 'btn btn-primary', style: 'color:#FFFFFF;'%>
         <br><br><%= link_to 'Realtor\'s account', @realtor, class: 'btn btn-danger', style: 'color:#FFFFFF;'%>
       </div>

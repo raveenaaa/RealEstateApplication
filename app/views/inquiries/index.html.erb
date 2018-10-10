@@ -1,6 +1,8 @@
 <% if logged_in? %>
 <p id="notice"><%= notice %></p>
-
+  <% if session[:role] == 'Realtor' && current_user.company_id == 1  %>
+    <p> You can't view any houses. Register to or create a company first</p>
+  <% else %>
 <h1>Inquiries</h1>
     <% @inquiries.each do |inquiry| %>
   <% if session[:role] == 'Admin' || (session[:role] == 'House Hunter' && inquiry.house_hunter_id == current_user.id) || (session[:role] == 'Realtor' && inquiry.house.company_id == current_user.company_id) %>
@@ -45,6 +47,7 @@
 <% end %>
 <br>
   <a href="javascript:history.back()">Back</a>
+    <% end %>
 <% else %>
   <script type="text/javascript">
       window.location.href="/login"  //Redirect to login for unlogged in users

@@ -19,5 +19,19 @@
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
+    <data-source name="Rails MyApp: production" uuid="f736a113-9a5a-4898-9468-c53b364c3297">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="POSTGRES" exact-version="0.0" />
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails MyApp: test" uuid="1c0b53c0-f8fa-4cc7-8481-1e8d19c5fed3">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" family="SQLITE" exact-version="0.0" />
+      <auth-required>false</auth-required>
+    </data-source>
+    <data-source name="Rails MyApp: development" uuid="05e96c29-4d2b-4c44-bbd4-9df318648d3e">
+      <database-info product="SQLite" version="3.20.1" jdbc-version="2.1" driver-name="SQLite JDBC" driver-version="3.20.1.1" family="SQLITE" exact-version="3.20.1" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-required>false</auth-required>
+      <introspection-schemas>*:@</introspection-schemas>
+    </data-source>
   </component>
 </project>

@@ -1,4 +1,7 @@
 <% if logged_in? %>
+  <% if session[:role] == 'Realtor' && current_user.company_id == 1  %>
+    <p> You can't view any houses. Register to or create a company first</p>
+  <% else %>
   <% if session[:role] == 'House Hunter'%>
     <script type="text/javascript">
         window.location.href="/house_hunters/<%= current_user.id %>"
@@ -14,6 +17,7 @@
       </div>
     </div>
   <% end %>
+    <% end %>
 <% else %>
   <script type="text/javascript">
       window.location.href="/login"  //Redirect to login for unlogged in users

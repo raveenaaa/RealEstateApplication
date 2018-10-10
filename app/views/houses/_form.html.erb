@@ -24,7 +24,7 @@
   <%# -------------COMPANY------------ %>
   <% if session[:role] == 'Admin' %>
   <%= form.label "Company" %>
-  <%= select("house", "company_id", Company.all.collect{ |c| [ c.name, c.id ]}, { include_blank: true }, {class: "form-control"}) %>
+  <%= select("house", "company_id", Company.all.collect{ |c| [ c.name, c.id ] if c.id !=1 }, {class: "form-control"}) %>
 <% else %>
     <%= form.label "Company" %>
       <%= form.select :company_id, [[current_user.company.name, current_user.company_id]], {class: "form-control"} %>

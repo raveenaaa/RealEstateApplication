@@ -46,11 +46,11 @@
         <%# ----------------COMPANY---------------%>
         <div class="form-group">
           <%= form.label :company_id %>
-          <%= select("realtor", "company_id", Company.all.collect{ |c| [ c.name, c.id ] if c.id !=1}, { include_blank: true }, {class: "form-control"})%>
+          <%= select("realtor", "company_id", Company.all.collect{ |c| [ c.name, c.id ] if c.id !=1}, {class: "form-control"})%>
         </div>
 
         <div class="actions form-group">
-          <%= form.submit 'Create Realtor', class: 'btn btn-primary'%>
+          <%= form.submit 'Submit', class: 'btn btn-primary'%>
         </div>
       </div>
     </div>
