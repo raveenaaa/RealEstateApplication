@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 <% if logged_in? && session[:role] == 'House Hunter' || session[:role] == 'Admin' %>
 <h1>Favourites</h1>
-
-<table class="table">
-  <thead class="thead-dark">
+  <div class="jumbotron">
+    <table class="table">
+      <thead class="thead-dark">
     <tr>
       <% if session[:role] == 'Admin' %>
       <th scope ="col">House Hunter</th>
@@ -35,6 +35,7 @@
     <% end %>
   </tbody>
 </table>
+  </div>
 <br>
 <% else %>
   <script type="text/javascript">

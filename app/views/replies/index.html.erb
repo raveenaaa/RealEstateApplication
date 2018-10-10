@@ -1,11 +1,18 @@
+<% if logged_in? %>
+  <% if session[:role] == 'Realtor' %>
+    <script type="text/javascript">
+    window.location.href="/realtors/<%= current_user.id %>"
+    </script>
+  <% else %>
 <p id="notice"><%= notice %></p>
 
 <h1>Replies</h1>
 
-<table>
-  <thead>
+<div class="jumbotron">
+  <table class="table">
+    <thead class="thead-dark">
     <tr>
-      <th>Message</th>
+      <th scope="col">Message</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,15 +20,21 @@
   <tbody>
     <% @replies.each do |reply| %>
       <tr>
-        <td><%= reply.message %></td>
+        <td scope="row"><%= reply.message %></td>
         <td><%= link_to 'Show', reply %></td>
+        <% if session[:role] == 'Admin' %>
         <td><%= link_to 'Edit', edit_reply_path(reply) %></td>
         <td><%= link_to 'Destroy', reply, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
-
-<%= link_to 'New Reply', new_reply_path %>
+<% end %>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  //Redirect to login for unlogged in users
+  </script>
+<% end %>

@@ -1,46 +1,51 @@
 <% if logged_in? %>
-<p id="notice"><%= notice %></p>
+<p id="notice"></p>
 
 <h1>Companies</h1>
 
-<table>
-  <thead>
+  <div class="jumbotron">
+    <table class="table">
+      <thead class="thead-dark">
     <tr>
-      <th>Name</th>
-      <th>Website</th>
-      <th>Address</th>
-      <th>Employee Count</th>
-      <th>Year</th>
-      <th>Revenue</th>
-      <th>Synopsis</th>
+      <th scope="row">Name</th>
+      <th scope="row">Website</th>
+      <th scope="row">Address</th>
+      <th scope="row">Employee Count</th>
+      <th scope="row">Year</th>
+      <th scope="row">Revenue</th>
+      <th scope="row">Synopsis</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @companies.each do |company| %>
+    <%if session[:role] == 'Admin' || session[:role] == 'Realtor' && current_user.company_id == company.id %>
       <tr>
-        <td><%= company.name %></td>
-        <td><%= company.website %></td>
-        <td><%= company.address %></td>
-        <td><%= company.size %></td>
-        <td><%= company.year %></td>
-        <td><%= company.revenue %></td>
-        <td><%= company.synopsis %></td>
-        <td><%= link_to 'Show', company %></td>
-        <td><%= link_to 'Edit', edit_company_path(company) %></td>
-        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <td scope="row"><%= company.name %></td>
+        <td scope="row"><%= company.website %></td>
+        <td scope="row"><%= company.address %></td>
+        <td scope="row"><%= company.size %></td>
+        <td scope="row"><%= company.year %></td>
+        <td scope="row"><%= company.revenue %></td>
+        <td scope="row"><%= company.synopsis %></td>
     <% end %>
+        <td scope="row"><%= link_to 'Show', company %></td>
+    <% if session[:role] == 'Admin' %>
+        <td scope="row"><%= link_to 'Edit', edit_company_path(company) %></td>
+        <td scope="row"><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+      </tr>
+<% end %>
   </tbody>
 </table>
-
+  </div>
 <br>
 <% unless session[:role] == 'House Hunter' %>
 <%= link_to 'New Company', new_company_path %>
     <% end %>
   <% else %>
     <script type="text/javascript">
-        window.location.href="/login"  // put your correct path in a string here
+        window.location.href="/login"  //Redirect to login for unlogged in users
     </script>
   <% end %>

@@ -1,18 +1,18 @@
 <% if logged_in? %>
 <p id="notice"><%= notice %></p>
   <h1>Houses</h1>
-
-  <table>
-    <thead>
+  <div class="jumbotron">
+    <table class="table">
+      <thead class="thead-dark">
     <tr>
-      <th>Name</th>
-      <th>Location</th>
-      <th>Company</th>
-      <th>Area</th>
-      <th>Year</th>
-      <th>Style</th>
-      <th>Price</th>
-      <th>Floors</th>
+      <th scope="col">Name</th>
+      <th scope="col">Location</th>
+      <th scope="col">Company</th>
+      <th scope="col">Area</th>
+      <th scope="col">Year</th>
+      <th scope="col">Style</th>
+      <th scope="col">Price</th>
+      <th scope="col">Floors</th>
       <th>Basement</th>
       <th>Owner</th>
       <th>Realtor's Contact</th>
@@ -25,17 +25,17 @@
     <% @houses.each do |house| %>
     <% if session[:role] == 'Realtor' && current_user.company_id == house.company_id || session[:role] == 'House Hunter' || session[:role] == 'Admin' %>
       <tr>
-        <td><%= house.name %></td>
-        <td><%= house.location %></td>
-        <td><%= house.company.name %></td>
-        <td><%= house.area %></td>
-        <td><%= house.year %></td>
-        <td><%= house.style %></td>
-        <td><%= house.price %></td>
-        <td><%= house.floors %></td>
-        <td><%= house.basement %></td>
-        <td><%= house.owner %></td>
-        <td><%= house.realtor.phone %></td>
+        <td scope="row"><%= house.name %></td>
+        <td scope="row"><%= house.location %></td>
+        <td scope="row"><%= house.company.name %></td>
+        <td scope="row"><%= house.area %></td>
+        <td scope="row"><%= house.year %></td>
+        <td scope="row"><%= house.style %></td>
+        <td scope="row"><%= house.price %></td>
+        <td scope="row"><%= house.floors %></td>
+        <td scope="row"><%= house.basement %></td>
+        <td scope="row"><%= house.owner %></td>
+        <td scope="row"><%= house.realtor.phone %></td>
         <td><%= link_to 'Show', house %></td>
         <td>
           <% unless session[:role] == 'House Hunter'%>  <%# Only Logged in Realtor and Admin has access %>
@@ -54,6 +54,7 @@
       <% end %>
     </tbody>
   </table>
+  </div>
   <br>
   <td>
     <%= link_to "Search Houses", new_search_path %></td>

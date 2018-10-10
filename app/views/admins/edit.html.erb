@@ -1,10 +1,21 @@
 <% if logged_in? %>
-
+  <% if session[:role] == 'House Hunter'%>
+    <script type="text/javascript">
+        window.location.href="/house_hunters/<%= current_user.id %>"
+    </script>
+  <% else %>
+    <% if session[:role] == 'Realtor'%>
+      <script type="text/javascript">
+          window.location.href="/realtors/<%= current_user.id %>"
+      </script>
+    <% else %>
 <h1>Editing Admin</h1>
 
 <%= render 'form', admin: @admin %>
 
-<%= link_to 'Show', @admin %> |
+<%= link_to 'Show', @admin %>
+      <% end %>
+  <% end %>
 <% else %>
   <script type="text/javascript">
       window.location.href="/login"  // put your correct path in a string here
