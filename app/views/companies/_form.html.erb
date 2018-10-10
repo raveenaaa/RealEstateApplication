@@ -4,56 +4,65 @@
       <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
 
       <ul>
-      <% company.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% company.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <%# ----------------COMPANY NAME---------------%>
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :company_name %>
+  <div class="container">
+    <div class="col-md-4 col-md-offset-3">
+      <div class="row form">
+
+        <%# ----------------COMPANY NAME---------------%>
+        <div class="field form-group">
+          <%= form.label :name %>
+          <%= form.text_field :name, id: :company_name, class: 'form-control', placeholder: "Enter Name"  %>
+        </div>
+
+        <%# ----------------WEBSITE---------------%>
+        <div class="field form-group">
+          <%= form.label :website %>
+          <%= form.text_field :website, id: :company_website, class: 'form-control', placeholder: "Enter Website"  %>
+        </div>
+
+        <%# ----------------ADDRESS---------------%>
+        <div class="field form-group">
+          <%= form.label :address %>
+          <%= form.text_field :address, id: :company_address, class: 'form-control', placeholder: "Enter Address"  %>
+        </div>
+
+        <%# ----------------SIZE---------------%>
+        <div class="field form-group">
+          <%= form.label "Count of Employees" %>
+          <%= form.text_field :size, id: :company_size, class: 'form-control', placeholder: "Enter count"  %>
+        </div>
+
+        <%# ----------------YEAR---------------%>
+        <div class="field form-group">
+          <%= form.label "Year of Establishment" %>
+          <%= form.text_field :year, id: :company_year, class: 'form-control', placeholder: "Enter Year"  %>
+        </div>
+
+        <%# ----------------REVENUE---------------%>
+        <div class="field form-group">
+          <%= form.label :revenue %>
+          <%= form.text_field :revenue, id: :company_revenue, class: 'form-control', placeholder: "Enter Revenue"  %>
+        </div>
+
+        <%# ----------------SYNOPSIS---------------%>
+        <div class="field form-group">
+          <%= form.label :synopsis %>
+          <%= form.text_area :synopsis, id: :company_synopsis, class: 'form-control', placeholder: "Enter Synopsis"  %>
+        </div>
+
+        <div class="actions form-group">
+          <%= form.submit 'Create Company', class: 'btn btn-primary' %>
+        </div>
+
+      </div>
+    </div>
   </div>
 
-  <%# ----------------WEBSITE---------------%>
-  <div class="field">
-    <%= form.label :website %>
-    <%= form.text_field :website, id: :company_website %>
-  </div>
-
-  <%# ----------------ADDRESS---------------%>
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address, id: :company_address %>
-  </div>
-
-  <%# ----------------SIZE---------------%>
-  <div class="field">
-    <%= form.label "Employee Count"%>
-    <%= form.text_field :size, id: :company_size %>
-  </div>
-
-  <%# ----------------YEAR---------------%>
-  <div class="field">
-    <%= form.label "Year of Establishment" %>
-    <%= form.text_field :year, id: :company_year %>
-  </div>
-
-  <%# ----------------REVENUE---------------%>
-  <div class="field">
-    <%= form.label :revenue %>
-    <%= form.text_field :revenue, id: :company_revenue %>
-  </div>
-
-  <%# ----------------SYNOPSIS---------------%>
-  <div class="field">
-    <%= form.label :synopsis %>
-    <%= form.text_area :synopsis, id: :company_synopsis %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

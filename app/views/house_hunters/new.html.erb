@@ -1,8 +1,16 @@
 <% if logged_in? && session[:role] =='Admin' || !logged_in? %>
-<h1>New House Hunter</h1>
+  <h1>New House Hunter</h1>
 
-<%= render 'form', house_hunter: @house_hunter %>
-  <a href="javascript:history.back()">Back</a>
+  <%= render 'form', house_hunter: @house_hunter %>
+
+  <br>
+  <div class="container">
+    <div class="col-md-4 col-md-offset-5">
+      <a href="javascript:history.back()" class="btn btn-default">Back</a>
+    </div>
+  </div>
+
+
 <% else %>
   <script type="text/javascript">
       window.location.href="/login"  //Redirect to login for unlogged in users

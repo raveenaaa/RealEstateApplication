@@ -4,11 +4,16 @@
         window.location.href="/house_hunters/<%= current_user.id %>"
     </script>
   <% else %>
-<h1>New House</h1>
+    <h1>New House</h1>
 
-<%= render 'form', house: @house %>
-<a href="javascript:history.back()">Back</a>
-<% end %>
+    <%= render 'form', house: @house %>
+    <br>
+    <div class="container">
+      <div class="col-md-4 col-md-offset-5">
+        <a href="javascript:history.back()" class="btn btn-default">Back</a>
+      </div>
+    </div>
+  <% end %>
 <% else %>
   <script type="text/javascript">
       window.location.href="/login"  //Redirect to login for unlogged in users

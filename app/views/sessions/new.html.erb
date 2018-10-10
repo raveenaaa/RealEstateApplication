@@ -1,21 +1,23 @@
 <% provide(:title, "Log in") %>
 <h1>Log in</h1>
 
-<div class="row center form">
+<div class="container">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_for(:session, url: login_path) do |f| %>
+    <div class="row center form">
+      <%= form_for(:session, url: login_path) do |f| %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-      <br>
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-      <br>
-      <%= f.label "Role" %>
-      <%= f.select :role, ['Admin', 'House Hunter', 'Realtor'], { include_blank: true }, class:'form-control' %><br><br>
-      <%= f.submit "Log in", class: "btn btn-primary" %>
-    <% end %>
+        <%= f.label :email %>
+        <%= f.email_field :email, class: 'form-control' %>
+        <br>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+        <br>
+        <%= f.label "Role" %>
+        <%= f.select :role, ['Admin', 'House Hunter', 'Realtor'], { include_blank: true }, class:'form-control' %><br><br>
+        <%= f.submit "Log in", class: "btn btn-primary" %>
+      <% end %>
 
-    <h6>New user? <%= link_to "Sign up now!", signup_path %></h6>
+      <h6>New user? <%= link_to "Sign up now!", signup_path %></h6>
+    </div>
   </div>
 </div>

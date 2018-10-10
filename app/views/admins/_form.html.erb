@@ -4,28 +4,28 @@
       <h2><%= pluralize(admin.errors.count, "error") %> prohibited this admin from being saved:</h2>
 
       <ul>
-      <% admin.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% admin.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :admin_name %>
+    <%= form.text_field :name, id: :admin_name, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-control">
     <%= form.label :email %>
-    <%= form.text_field :email, id: :admin_email %>
+    <%= form.text_field :email, id: :admin_email, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :password %>
-    <%= form.text_field :password, id: :admin_password %>
+    <%= form.text_field :password, id: :admin_password, class: 'form-control' %>
     <%= form.label :password_confirmation, "Confirmation" %>
-    <%= form.password_field :password_confirmation, id: :admin_password %>
+    <%= form.password_field :password_confirmation, id: :admin_password, class: 'form-control' %>
   </div>
 
   <div class="actions">

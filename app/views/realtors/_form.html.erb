@@ -11,37 +11,48 @@
     </div>
   <% end %>
 
-  <%# ----------------NAME---------------%>
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :realtor_name %>
-  </div>
+  <div class="container">
+    <div class="col-md-4 col-md-offset-3">
+      <div class="row form">
 
-  <%# ----------------EMAIL---------------%>
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :realtor_email %>
-  </div>
+        <%# ----------------NAME---------------%>
+        <div class="field form-group">
+          <%= form.label :name %>
+          <%= form.text_field :name, id: :realtor_name, class: 'form-control', placeholder: "Enter Name"%>
+        </div>
 
-    <%# ----------------PASSWORD---------------%>
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password, id: :realtor_password%>
-    <%= form.label :password_confirmation, "Confirm password" %>
-    <%= form.password_field :password_confirmation, id: :realtor_password %>
-  </div>
+        <%# ----------------EMAIL---------------%>
+        <div class="field form-group">
+          <%= form.label :email %>
+          <%= form.text_field :email, id: :realtor_email, class: 'form-control', placeholder: "Enter email" %>
+        </div>
 
-  <%# ----------------PHONE---------------%>
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, id: :realtor_phone %>
-  </div>
 
-  <%# ----------------COMPANY---------------%>
-  <%= form.label :company_id %>
-  <%= select("realtor", "company_id", Company.all.collect{ |c| [ c.name, c.id ] if c.id !=1}) %>
+        <%# ----------------PASSWORD---------------%>
+        <div class="field form-group">
+          <%= form.label :password %>
+          <%= form.password_field :password, id: :realtor_password, class: 'form-control', placeholder: "Enter Password" %>
+          <br>
+          <%= form.label :password_confirmation, "Confirm password" %>
+          <%= form.password_field :password_confirmation, id: :realtor_password, class: 'form-control', placeholder: "Enter Password again"  %>
+        </div>
 
-  <div class="actions">
-    <%= form.submit %>
+        <%# ----------------PHONE---------------%>
+        <div class="field form-group">
+          <%= form.label :phone %>
+          <%= form.text_field :phone, id: :realtor_phone, class: 'form-control', placeholder: "Enter Phone Number"  %>
+        </div>
+
+        <%# ----------------COMPANY---------------%>
+        <div class="form-group">
+          <%= form.label :company_id %>
+          <%= select("realtor", "company_id", Company.all.collect{ |c| [ c.name, c.id ] if c.id !=1}, { include_blank: true }, {class: "form-control"})%>
+        </div>
+
+        <div class="actions form-group">
+          <%= form.submit 'Create Realtor', class: 'btn btn-primary'%>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>

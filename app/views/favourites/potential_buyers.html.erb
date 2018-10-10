@@ -4,9 +4,9 @@
         window.location.href="/house_hunters/<%= current_user.id %>"  // put your correct path in a string here
     </script>
   <% else %>
-<p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
 
-<h1>Potential Buyers</h1>
+    <h1>Potential Buyers</h1>
 
     <div class="jumbotron">
       <table class="table">
@@ -30,8 +30,10 @@
   </tbody>
 </table>
     </div>
+
 <br>
-    <a href="javascript:history.back()">Back</a>
+
+  <a href="javascript:history.back()" class="btn btn-default">Back</a>
   <% end %>
 <% else %>
   <script type="text/javascript">

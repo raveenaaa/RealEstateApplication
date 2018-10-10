@@ -1,11 +1,17 @@
 <% if logged_in? %>
   <% if session[:role] == 'Admin' || session[:role] == 'Realtor' && @realtor.company_id == @inquiry.house.company_id %>
-<h1>New Reply</h1>
+    <h1>New Reply</h1>
 
-<%= render 'form', reply: @reply %>
+    <%= render 'form', reply: @reply %>
 
-<%= link_to 'Back', replies_path %>
-<% else %>
+    <br>
+    <div class="container">
+      <div class="col-md-4 col-md-offset-5">
+        <%= link_to 'Back', replies_path , class: "btn btn-default" %>
+      </div>
+    </div>
+
+  <% else %>
     <% if session[:role] == 'Realtor' %>
       <script type="text/javascript">
           window.location.href="/realtors/<%= current_user.id %>"
