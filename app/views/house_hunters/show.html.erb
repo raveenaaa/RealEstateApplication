@@ -3,6 +3,7 @@
     <script type="text/javascript">
     window.location.href="/realtors/<%= current_user.id %>"
     </script>
+    <% end %>
 <p id="notice"><%= notice %></p>
 <p>
   <strong>Name:</strong>
@@ -28,7 +29,6 @@
 <%= link_to 'View Companies', companies_path %><br><br>
 
 <%= link_to 'View Favourites', favourites_path %><br><br>
-    <%end %>
 <% else %>
   <script type="text/javascript">
       window.location.href="/login"  //Redirect to login for unlogged in users
