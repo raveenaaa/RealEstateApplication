@@ -3,18 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6565a8e1-f6fd-4b0e-b4c5-cb015ec33544" name="Default Changelist" comment="Added admin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/houses_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/houses_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/replies_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/replies_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/companies/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/companies/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/companies/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/companies/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/companies/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/companies/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/companies/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/companies/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/houses/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/houses/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/houses/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/houses/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/inquiries/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inquiries/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/realtors/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/realtors/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/development.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db/development.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,12 +25,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="development.sqlite3 [2]" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FUSProjectUsageTrigger">
@@ -321,8 +304,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/houses/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="22" column="107" selection-start-line="22" selection-start-column="107" selection-end-line="22" selection-end-column="107" />
+            <state relative-caret-position="299">
+              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -668,7 +651,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229279000" />
+    <option name="totallyTimeSpent" value="229927000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1087,8 +1070,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/houses/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="22" column="107" selection-start-line="22" selection-start-column="107" selection-end-line="22" selection-end-column="107" />
+        <state relative-caret-position="299">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
         </state>
       </provider>
     </entry>
