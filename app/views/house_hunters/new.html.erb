@@ -1,5 +1,11 @@
+<% if logged_in? && session[:role] =='Admin' || !logged_in? %>
 <h1>New House Hunter</h1>
 
 <%= render 'form', house_hunter: @house_hunter %>
 
 <%= link_to 'Back', '/login' %>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  //Redirect to login for unlogged in users
+  </script>
+<% end %>

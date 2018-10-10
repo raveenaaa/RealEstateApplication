@@ -1,26 +1,34 @@
+<% if logged_in?%>
+  <% if session[:role] == 'House Hunter' %>
+    <script type="text/javascript">
+        window.location.href="/house_hunters/<%= current_user.id %>"
+    </script>
+  <% else %>
 <p id="notice"><%= notice %></p>
 <h2>Profile</h2>
 <p>
   <strong>Name:</strong>
-  <%= current_user.name %>
+  <%= @realtor.name %>
 </p>
 
 <p>
   <strong>Email:</strong>
-  <%= current_user.email %>
+  <%= @realtor.email %>
 </p>
 
 <p>
   <strong>Phone:</strong>
-  <%= current_user.phone %>
+  <%= @realtor.phone %>
 </p>
 
 <p>
   <strong>Company:</strong>
-  <%= current_user.company.name %>
+  <%= @realtor.company.name %>
 </p>
 <%= link_to 'Edit Profile', edit_realtor_path(@current_user) %> |
-<br><br>
-<%= link_to 'View Houses', houses_path %>
-<br><br>
-<%= link_to 'View Inquiries', inquiries_path %>
+  <% end %>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  //Redirect to login for unlogged in users
+  </script>
+<% end %>

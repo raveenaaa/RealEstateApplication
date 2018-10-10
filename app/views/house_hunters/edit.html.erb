@@ -1,6 +1,18 @@
+<% if logged_in? %>
+  <% if session[:role] == 'Realtor'%>
+    <script type="text/javascript">
+        window.location.href="/realtors/<%= current_user.id %>"
+    </script>
+  <% else %>
 <h1>Editing House Hunter</h1>
 
 <%= render 'form', house_hunter: @house_hunter %>
 
 <%= link_to 'Show', @house_hunter %> |
 <%= link_to 'Back', house_hunters_path %>
+  <% end %>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  //Redirect to login for unlogged in users
+  </script>
+<% end %>

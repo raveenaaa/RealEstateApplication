@@ -12,12 +12,7 @@ class FavouritesController < ApplicationController
   def show
   end
 
-  # GET /favourites/new
-  def new
-    @favourite = Favourite.new
-  end
-
-  # GET /favourites/1/edit
+   # GET /favourites/1/edit
   def edit
   end
 
@@ -27,19 +22,6 @@ class FavouritesController < ApplicationController
 
    # POST /favourites
   # POST /favourites.json
-  def create
-     @favourite = Favourite.includes(:house, :house_hunter).new(favourite_params)
-
-    respond_to do |format|
-      if @favourite.save
-        format.html { redirect_to @favourite, notice: 'Favourite was successfully created.' }
-        format.json { render :show, status: :created, location: @favourite }
-      else
-        format.html { render :new }
-        format.json { render json: @favourite.errors, status: :unprocessable_entity }
-      end
-    end
-  end
 
   def add
     @favourite = Favourite.includes(:house, :house_hunter).new(house_hunter_id: params[:house_hunter_id] , house_id: params[:house_id])
@@ -48,7 +30,7 @@ class FavouritesController < ApplicationController
         format.html { redirect_to new_search_path, notice: 'Favourite was successfully created.' }
         format.json { render :show, status: :created, location: @favourite }
       else
-        format.html { render :new }
+        format.html { redirect_to houses_path }
         format.json { render json: @favourite.errors, status: :unprocessable_entity }
       end
     end

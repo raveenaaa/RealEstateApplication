@@ -1,9 +1,12 @@
+<% if logged_in?%>
+  <%if session[:role] == 'Admin' %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Realtors</h1>
 
-<table>
-  <thead>
+<table class="table">
+  <thead class="thead-dark">
     <tr>
       <th>Name</th>
       <th>Email</th>
@@ -27,11 +30,21 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-
 <%= link_to 'New Realtor', new_realtor_path %>
-<br><br>
-<%= link_to 'View Houses', houses_path %>
-<br><br>
-<%= link_to 'View Inquiries', inquiries_path %>
+<% else %>
+<% if session[:role] == 'Realtor' %>
+  <script type="text/javascript">
+      window.location.href="/realtors/<%= current_user.id %>"
+  </script>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/house_hunters/<%= current_user.id %>"
+  </script>
+<% end %>
+<% end %>
+<% else %>
+<script type="text/javascript">
+    window.location.href="/login"  //Redirect to login for unlogged in users
+</script>
+<% end %>

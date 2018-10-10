@@ -1,13 +1,15 @@
+<% if logged_in?%>
+  <%if session[:role] == 'Admin' %>
 <p id="notice"><%= notice %></p>
 
 <h1>House Hunters</h1>
-
-<table>
-  <thead>
+    <div class="jumbotron">
+<table class="table">
+  <thead class="thead_dark">
     <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
+      <th scope ="col">Name</th>
+      <th scope ="col">Email</th>
+      <th scope ="col">Phone</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,17 +17,32 @@
   <tbody>
     <% @house_hunters.each do |house_hunter| %>
       <tr>
-        <td><%= house_hunter.name %></td>
-        <td><%= house_hunter.email %></td>
-        <td><%= house_hunter.phone %></td>
-        <td><%= link_to 'Show', house_hunter %></td>
+        <td scope ="row"><%= house_hunter.name %></td>
+        <td scope ="row"><%= house_hunter.email %></td>
+        <td scope ="row"><%= house_hunter.phone %></td>
+        <td scope ="row"><%= link_to 'Show', house_hunter %></td>
         <td><%= link_to 'Edit', edit_house_hunter_path(house_hunter) %></td>
         <td><%= link_to 'Destroy', house_hunter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+    </div>
 <br>
-
 <%= link_to 'New House Hunter', new_house_hunter_path %>
+ <% else %>
+    <% if session[:role] == 'Realtor' %>
+    <script type="text/javascript">
+        window.location.href="/realtors/<%= current_user.id %>"
+    </script>
+      <% else %>
+      <script type="text/javascript">
+          window.location.href="/house_hunters/<%= current_user.id %>"
+      </script>
+    <% end %>
+    <% end %>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  //Redirect to login for unlogged in users
+  </script>
+<% end %>

@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <p id="notice"><%= notice %></p>
 
 <h1>Companies</h1>
@@ -35,5 +36,11 @@
 </table>
 
 <br>
-
+<% unless session[:role] == 'House Hunter' %>
 <%= link_to 'New Company', new_company_path %>
+    <% end %>
+  <% else %>
+    <script type="text/javascript">
+        window.location.href="/login"  // put your correct path in a string here
+    </script>
+  <% end %>

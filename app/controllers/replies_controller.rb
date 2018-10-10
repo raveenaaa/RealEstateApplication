@@ -10,29 +10,29 @@ class RepliesController < ApplicationController
   # GET /replies/1
   # GET /replies/1.json
   def show
+    @realtor = Realtor.find_by(email: current_user.email)
   end
 
   # GET /replies/new
   def new
     @reply = Reply.new
+    @inquiry = Inquiry.includes(:house, :house_hunter).find_by(id: params[:inquiry_id])
     session[:inquiry_id] = params[:inquiry_id]
+    @realtor = Realtor.find_by(email: current_user.email)
   end
 
   # GET /replies/1/edit
   def edit
+    @realtor = Realtor.find_by(email: current_user.email)
   end
 
   # POST /replies
   # POST /replies.json
   def create
     val = reply_params
-    val[:inquiry_id] = session[:inquiry_id]
+    val[:inquiry_id] = @inquiry.id
     session.delete :inquiry_id
-    if session[:role] == 'Admin'
-      val[:realtor_id] = Realtor.find_by(email: current_user.email).id
-    else
     val[:realtor_id] = current_user.id
-    end
     @reply = Reply.includes(:inquiry, :realtor).new(val)
 
     respond_to do |format|

@@ -1,3 +1,9 @@
+<% if logged_in? %>
+  <% if session[:role] == 'House Hunter'%>
+    <script type="text/javascript">
+        window.location.href="/house_hunters/<%= current_user.id %>"  // put your correct path in a string here
+    </script>
+  <% else %>
 <p id="notice"><%= notice %></p>
 
 <h1>Potential Buyers</h1>
@@ -26,3 +32,9 @@
 <br>
 
 <%= link_to 'Back', houses_path %>
+  <% end %>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"  //Redirect to login for unlogged in users
+  </script>
+<% end %>

@@ -1,5 +1,25 @@
+<% if logged_in? %>
+  <% if session[:role] == 'Admin' || session[:role] == 'Realtor' && @realtor.company_id == @inquiry.house.company_id %>
 <h1>New Reply</h1>
 
 <%= render 'form', reply: @reply %>
 
 <%= link_to 'Back', replies_path %>
+<% else %>
+    <% if session[:role] == 'Realtor' %>
+      <script type="text/javascript">
+          window.location.href="/realtors/<%= current_user.id %>"
+      </script>
+    <% else %>
+      <% if session[:role] == 'House Hunter' %>
+        <script type="text/javascript">
+            window.location.href="/house_hunters/<%= current_user.id %>"
+        </script>
+<%end %>
+<% end %>
+<% end %>
+<% else %>
+  <script type="text/javascript">
+      window.location.href="/login"
+  </script>
+<% end %>
