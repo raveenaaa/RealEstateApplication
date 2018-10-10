@@ -27,8 +27,12 @@ class InquiriesController < ApplicationController
   # POST /inquiries.json
   def create
     values = inquiry_params
+    if session[:role] == 'Admin'
+      values[:house_hunter_id] = HouseHunter.find_by(email: current_user.email).id
+    else
     values[:house_hunter_id] = current_user.id
-     @inquiry = Inquiry.includes(:house, :house_hunter).new(values)
+    end
+    @inquiry = Inquiry.includes(:house, :house_hunter).new(values)
 
     respond_to do |format|
       if @inquiry.save

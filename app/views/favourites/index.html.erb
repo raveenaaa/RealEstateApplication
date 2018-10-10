@@ -2,14 +2,14 @@
 <% if logged_in? && session[:role] == 'House Hunter' || session[:role] == 'Admin' %>
 <h1>Favourites</h1>
 
-<table>
-  <thead>
+<table class="table">
+  <thead class="thead-dark">
     <tr>
       <% if session[:role] == 'Admin' %>
-      <th>House Hunter</th>
+      <th scope ="col">House Hunter</th>
         <% end %>
-      <th>House</th>
-      <th>Realtor</th>
+      <th scope ="col">House</th>
+      <th scope ="col">Realtor</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,15 +18,15 @@
     <% @favourites.each do |favourite| %>
       <tr>
         <% if session[:role] == 'Admin' %>
-        <td><%= favourite.house_hunter.name %></td>
-        <td><%= favourite.house.name %></td>
-        <td><%= favourite.house.realtor.name %></td>
+        <td scope ="row"><%= favourite.house_hunter.name %></td>
+        <td scope ="row"><%= favourite.house.name %></td>
+        <td scope ="row"><%= favourite.house.realtor.name %></td>
         <td><%= link_to "View #{favourite.house.name}", favourite.house %></td>
         <td><%= link_to 'Remove', favourite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
          <% else %>
         <% if current_user.id == favourite.house_hunter_id %>
-            <td><%= favourite.house.name %></td>
-            <td><%= favourite.house.realtor.name %></td>
+            <td scope ="row"><%= favourite.house.name %></td>
+            <td scope ="row"><%= favourite.house.realtor.name %></td>
             <td><%= link_to "View house", favourite.house %></td>
             <td><%= link_to 'Remove', favourite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             <% end %>

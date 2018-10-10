@@ -33,7 +33,11 @@ class RepliesController < ApplicationController
     val = reply_params
     val[:inquiry_id] = session[:inquiry_id]
     session.delete :inquiry_id
+    if session[:role] == 'Admin'
+      val[:realtor_id] = Realtor.find_by(email: current_user.email).id
+    else
     val[:realtor_id] = current_user.id
+    end
     @reply = Reply.includes(:inquiry, :realtor).new(val)
 
     respond_to do |format|
