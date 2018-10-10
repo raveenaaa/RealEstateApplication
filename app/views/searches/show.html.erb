@@ -5,8 +5,10 @@
   <% @search.search_houses.each do |c| %>
     <div class="div">
       <h1><%= c.name %></h1>
+      <% if session[:role] != 'Realtor' %>
       <%= link_to 'Add to Favourites', "/favourites/add/#{current_user.id}/#{c.id}" %>
-      <p>location: <%= c.location %></p>
+        <% end %>
+      <p>Location: <%= c.location %></p>
       <p>Company: <%= c.company.name %></p>
       <p> Area: <%= c.area %></p>
       <p> Area: <%= c.area %></p>

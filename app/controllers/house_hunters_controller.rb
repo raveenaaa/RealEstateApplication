@@ -10,7 +10,9 @@ class HouseHuntersController < ApplicationController
   # GET /house_hunters/1
   # GET /house_hunters/1.json
   def show
+    if logged_in?
     @house_hunter = HouseHunter.find_by(id: current_user.id)
+      end
   end
 
   # GET /house_hunters/new

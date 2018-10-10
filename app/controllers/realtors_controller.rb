@@ -10,7 +10,9 @@ class RealtorsController < ApplicationController
   # GET /realtors/1
   # GET /realtors/1.json
   def show
+    if logged_in?
     @realtor = Realtor.find_by(email: current_user.email)
+      end
   end
 
   # GET /realtors/new
@@ -25,8 +27,13 @@ class RealtorsController < ApplicationController
   # POST /realtors
   # POST /realtors.json
   def create
+    val = realtor_params
+    if val[:company_id].blank?
+      val[:company_id] = 1
+      @realtor = Realtor.includes(:company).new(val)
+    else
     @realtor = Realtor.includes(:company).new(realtor_params)
-
+    end
     respond_to do |format|
       if @realtor.save
         log_in @realtor, "Realtor"
@@ -43,8 +50,12 @@ class RealtorsController < ApplicationController
   # PATCH/PUT /realtors/1
   # PATCH/PUT /realtors/1.json
   def update
+    val = realtor_params
+    if val[:company_id].blank?
+      val[:company_id] = 1
+     end
     respond_to do |format|
-      if @realtor.update(realtor_params)
+      if @realtor.update(val)
         flash[:notice] = 'Your profile was updated!'
         format.html { redirect_to @realtor }
         format.json { render :show, status: :ok, location: @realtor }
@@ -53,6 +64,12 @@ class RealtorsController < ApplicationController
         format.json { render json: @realtor.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def update_profile
+    @realtor = Realtor.find_by(id: current_user.id)
+        @realtor.update_attribute(:company_id, params[:company_id])
+    redirect_to @realtor
   end
 
   # DELETE /realtors/1

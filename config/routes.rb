@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'favourites/potential_buyers/:house_id', to: 'favourites#potential_buyers'
   get 'favourites/add/:house_hunter_id/:house_id', to: 'favourites#add'
+  get '/realtors/update_profile/:company_id', to: 'realtors#update_profile'
   get '/home', to: 'static_pages#home'
   resources :admins
   resources :names

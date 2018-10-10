@@ -23,7 +23,11 @@
 
 <p>
   <strong>Company:</strong>
-  <%= @realtor.company.name %>
+  <% if @realtor.company_id != 1 %>
+    <%= @realtor.company.name %>
+    <% else %>
+    <%= link_to 'Choose existing company', edit_realtor_path(@current_user) %>  |  <%= link_to 'Add your company', new_company_path %>
+    <% end %>
 </p>
 <%= link_to 'Edit Profile', edit_realtor_path(@current_user) %>
 <br>

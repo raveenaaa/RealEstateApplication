@@ -18,6 +18,7 @@
 
   <tbody>
     <% @companies.each do |company| %>
+  <% if company.id != 1 %>
     <%if session[:role] == 'Admin' || session[:role] == 'Realtor' && current_user.company_id == company.id %>
       <tr>
         <td scope="row"><%= company.name %></td>
@@ -34,6 +35,7 @@
         <td scope="row"><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>
       </tr>
+  <% end %>
 <% end %>
   </tbody>
 </table>

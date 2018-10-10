@@ -3,37 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="6565a8e1-f6fd-4b0e-b4c5-cb015ec33544" name="Default Changelist" comment="Added admin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/favourites_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/favourites_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/admins_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/admins_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/companies_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/companies_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/house_hunters_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/house_hunters_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admins/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admins/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admins/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admins/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/companies/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/companies/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/houses_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/houses_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/inquiries_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/inquiries_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/realtors_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/realtors_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/replies_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/replies_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/search.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/search.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/companies/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/companies/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/companies/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/companies/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/companies/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/companies/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favourites/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/favourites/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favourites/potential_buyers.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/favourites/potential_buyers.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/favourites/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/favourites/show.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/house_hunters/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/house_hunters/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/house_hunters/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/house_hunters/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/house_hunters/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/house_hunters/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/house_hunters/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/house_hunters/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/houses/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/houses/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/houses/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/houses/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/houses/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/houses/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/houses/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/houses/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/inquiries/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inquiries/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/inquiries/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inquiries/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/inquiries/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inquiries/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/inquiries/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/inquiries/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/realtors/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/realtors/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/houses/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/houses/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/realtors/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/realtors/_form.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/realtors/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/realtors/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/realtors/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/realtors/new.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/realtors/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/realtors/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/replies/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/replies/edit.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/replies/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/replies/new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/searches/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/searches/edit.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/searches/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/searches/show.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/development.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db/development.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -289,38 +276,38 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="74" />
-          <entry key="erb" value="7050" />
-          <entry key="rb" value="2307" />
+          <entry key="cell" value="125" />
+          <entry key="erb" value="7700" />
+          <entry key="rb" value="3402" />
           <entry key="rb20181007-9696-1v5zx4f" value="1" />
           <entry key="scss" value="382" />
-          <entry key="txt" value="6" />
+          <entry key="txt" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="RHTML" value="7050" />
-          <entry key="Ruby" value="2307" />
+          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="RHTML" value="7700" />
+          <entry key="Ruby" value="3402" />
           <entry key="SCSS" value="382" />
-          <entry key="Scratch" value="74" />
+          <entry key="Scratch" value="125" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Gemfile" value="1" />
           <entry key="admins" value="1" />
-          <entry key="companies" value="1" />
-          <entry key="erb" value="278" />
+          <entry key="companies" value="20" />
+          <entry key="erb" value="299" />
           <entry key="favourites" value="3" />
           <entry key="house_hunters" value="10" />
-          <entry key="houses" value="4" />
+          <entry key="houses" value="7" />
           <entry key="inquiries" value="12" />
-          <entry key="jbuilder" value="2" />
+          <entry key="jbuilder" value="5" />
           <entry key="js" value="2" />
-          <entry key="rb" value="59" />
+          <entry key="rb" value="85" />
           <entry key="rb20181007-9696-1v5zx4f" value="1" />
-          <entry key="realtors" value="7" />
+          <entry key="realtors" value="17" />
           <entry key="replies" value="8" />
           <entry key="rnc" value="2" />
           <entry key="scss" value="4" />
@@ -330,12 +317,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="47" />
+          <entry key="Database Element" value="79" />
           <entry key="JavaScript" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="RHTML" value="278" />
+          <entry key="RHTML" value="299" />
           <entry key="RNG Compact" value="2" />
-          <entry key="Ruby" value="62" />
+          <entry key="Ruby" value="91" />
           <entry key="SCSS" value="4" />
           <entry key="Scratch" value="1" />
         </counts>
@@ -345,46 +332,82 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/replies/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/replies/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/companies/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/companies/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="287">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/realtors/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="28" column="131" selection-start-line="28" selection-start-column="131" selection-end-line="28" selection-end-column="131" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/searches/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="230">
+              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/houses/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="713">
+              <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/houses/new.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/models/search.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="253">
+              <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/companies_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/house_hunters/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="69">
+              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/realtors_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -408,35 +431,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/admins/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/admins_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/favourites/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admins/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/favourites/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/realtors_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/inquiries_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/companies/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/realtors/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/replies_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/houses_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/houses/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/replies/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" />
         <option value="$PROJECT_DIR$/app/views/house_hunters/show.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/favourites_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/house_hunters/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/house_hunters_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/admins/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admins/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/companies/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/searches/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/companies/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/companies/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/favourites/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/house_hunters/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/favourites/show.html.erb" />
@@ -450,15 +455,33 @@
         <option value="$PROJECT_DIR$/app/views/inquiries/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/inquiries/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/realtors/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/realtors/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/realtors/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/realtors/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/replies/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/replies/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/searches/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/companies/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/favourites/potential_buyers.html.erb" />
         <option value="$PROJECT_DIR$/app/views/house_hunters/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/admins_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/house_hunters_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/inquiries_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/replies_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/houses_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/house_hunters/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/realtor.rb" />
+        <option value="$PROJECT_DIR$/app/views/companies/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/realtors/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/companies/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/realtors/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/companies/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/realtors/_company.json.jbuilder" />
+        <option value="$PROJECT_DIR$/app/views/realtors/create_company.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/realtors/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/companies_controller.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/realtors_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/searches/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/houses/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/search.rb" />
       </list>
     </option>
   </component>
@@ -473,7 +496,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1366" />
@@ -501,6 +524,12 @@
               <item name="Current_App" type="b2602c69:ProjectViewProjectNode" />
               <item name="Current_App" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Current_App" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Current_App" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -508,7 +537,7 @@
               <item name="Current_App" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="houses" type="462c0819:PsiDirectoryNode" />
+              <item name="searches" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -698,7 +727,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="245845000" />
+    <option name="totallyTimeSpent" value="260852000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -710,7 +739,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.14750378" />
@@ -727,7 +756,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49924356" weight="0.23865546" />
       <window_info anchor="bottom" id="Database Changes" order="10" sideWeight="0.49924356" weight="0.32941177" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4871407" visible="true" weight="0.29075631" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4871407" visible="true" weight="0.26386556" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5128593" side_tool="true" weight="0.292437" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -782,204 +811,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/house_hunters/index.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/companies/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="33" column="37" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/rubymine.jar!/resources/html5-schema/html5/core-scripting.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/favourites/index.json.jbuilder">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b6da83db-7e82-4bad-9c29-8b0cf3f9bc42/schema/main/table/replies">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b6da83db-7e82-4bad-9c29-8b0cf3f9bc42/schema/main/table/inquiries">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b6da83db-7e82-4bad-9c29-8b0cf3f9bc42/schema/main/table/house_hunters">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/realtors/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="39" column="46" lean-forward="true" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://b6da83db-7e82-4bad-9c29-8b0cf3f9bc42/schema/main/table/searches">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/house_hunters_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/house_hunters/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/houses/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="77" column="21" lean-forward="true" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="48" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/favourites_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="29" column="70" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/favourites/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/houses/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="72" column="46" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/inquiries/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/inquiries/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/inquiries/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/inquiries/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/realtors/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/realtors/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/realtors/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="35" column="48" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/realtors/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/replies/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admins/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-426">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admins/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -991,13 +822,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/searches/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1019,27 +843,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/replies/show.html.erb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/replies/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/companies/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="45" column="12" lean-forward="true" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/companies/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/favourites/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-345">
@@ -1054,24 +857,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/companies/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/house_hunters/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/house_hunters/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -1103,17 +892,249 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/companies/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/houses/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="345">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/houses/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/companies/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="161">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/replies/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/admins_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-955">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/favourites_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-782">
+          <caret line="29" column="70" selection-start-line="29" selection-start-column="70" selection-end-line="29" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/house_hunters_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1162">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/houses_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1245">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/inquiries_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1323">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/replies_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1288">
+          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/replies/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="34" column="9" lean-forward="true" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/house_hunters/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/companies/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/realtor.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/companies/create_company.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/companies/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/realtors/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/companies/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/favourites/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/realtors/_realtor.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/companies/_company.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/realtors/_company.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/realtors/create_company.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/companies/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="9" column="23" lean-forward="true" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/realtors/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="41" column="91" selection-start-line="41" selection-start-column="91" selection-end-line="41" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/realtors/update_profile.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/house_hunters/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/companies_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="31" column="38" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/realtors_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="70" column="35" selection-start-line="70" selection-start-column="35" selection-end-line="70" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b6da83db-7e82-4bad-9c29-8b0cf3f9bc42/schema/main/table/realtors">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/realtors/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="28" column="131" selection-start-line="28" selection-start-column="131" selection-end-line="28" selection-end-column="131" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b6da83db-7e82-4bad-9c29-8b0cf3f9bc42/schema/main/table/companies">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/searches/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/searches/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://b6da83db-7e82-4bad-9c29-8b0cf3f9bc42/schema/main/table/houses">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/houses/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="31" column="57" lean-forward="true" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/search.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
