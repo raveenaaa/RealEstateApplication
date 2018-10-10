@@ -18,10 +18,9 @@
         </p>
 
         <% unless session[:role] == 'Realtor' %>
-
-        <% unless @replies.where(inquiry_id: inquiry.id).nil? %>
+        <% if @replies.where(inquiry_id: inquiry.id).present? %>
               <a href="#" id="toggler">View/Hide Replies</a>
-        <div id="toggled" class="hidden">
+        <div id="toggled">
         <% @replies.where(inquiry_id: inquiry.id).each do |reply| %>
           <p><%= reply.realtor.name %>'s Reply:<%= reply.message %></p>
           <% end %>
@@ -45,6 +44,7 @@
 <%= link_to 'New Inquiry', new_inquiry_path %>
 <% end %>
 <br>
+  <a href="javascript:history.back()">Back</a>
 <% else %>
   <script type="text/javascript">
       window.location.href="/login"  //Redirect to login for unlogged in users

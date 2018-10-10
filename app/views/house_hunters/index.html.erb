@@ -30,6 +30,7 @@
     </div>
 <br>
 <%= link_to 'New House Hunter', new_house_hunter_path %>
+    <a href="javascript:history.back()">Back</a>
  <% else %>
     <% if session[:role] == 'Realtor' %>
     <script type="text/javascript">

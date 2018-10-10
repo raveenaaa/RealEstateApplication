@@ -10,7 +10,7 @@
 <%= render 'form', reply: @reply %>
 
 <%= link_to 'Show', @reply %> |
-<%= link_to 'Back', replies_path %>
+      <a href="javascript:history.back()">Back</a>
     <% end %>
   <% end %>
 <% else %>

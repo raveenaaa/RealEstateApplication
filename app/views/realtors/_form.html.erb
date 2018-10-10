@@ -11,23 +11,23 @@
     </div>
   <% end %>
 
-  <%# ----------------EMAIL---------------%>
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :realtor_email %>
-  </div>
-
   <%# ----------------NAME---------------%>
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name, id: :realtor_name %>
   </div>
 
-  <%# ----------------PASSWORD---------------%>
+  <%# ----------------EMAIL---------------%>
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :realtor_email %>
+  </div>
+
+    <%# ----------------PASSWORD---------------%>
   <div class="field">
     <%= form.label :password %>
     <%= form.password_field :password, id: :realtor_password%>
-    <%= form.label :password_confirmation, "Confirmation" %>
+    <%= form.label :password_confirmation, "Confirm password" %>
     <%= form.password_field :password_confirmation, id: :realtor_password %>
   </div>
 
@@ -39,7 +39,7 @@
 
   <%# ----------------COMPANY---------------%>
   <%= form.label :company_id %>
-  <%= select("realtor", "company_id", Company.all.collect{ |c| [ c.name, c.id ]}, { include_blank: true }) %>
+  <%= select("realtor", "company_id", Company.all.collect{ |c| [ c.name, c.id ] if c.id !=1}) %>
 
   <div class="actions">
     <%= form.submit %>

@@ -22,7 +22,11 @@
         <td scope ="row"><%= realtor.name %></td>
         <td scope ="row"><%= realtor.email %></td>
         <td scope ="row"><%= realtor.phone %></td>
+        <% if realtor.company_id == 1 %>
+        <td scope ="row"><%= " " %></td>
+          <% else %>
         <td scope ="row"><%= realtor.company.name %></td>
+          <% end %>
         <td><%= link_to 'Show', realtor %></td>
         <td><%= link_to 'Edit', edit_realtor_path(realtor) %></td>
         <td><%= link_to 'Destroy', realtor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -33,6 +37,7 @@
     </div>
 <br>
 <%= link_to 'New Realtor', new_realtor_path %>
+    <a href="javascript:history.back()">Back</a>
 <% else %>
 <% if session[:role] == 'Realtor' %>
   <script type="text/javascript">

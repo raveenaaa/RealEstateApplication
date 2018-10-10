@@ -11,7 +11,9 @@ class InquiriesController < ApplicationController
   # GET /inquiries/1
   # GET /inquiries/1.json
   def show
+    if logged_in?
     @realtor = Realtor.find_by(email: current_user.email)
+      end
   end
 
   # GET /inquiries/new

@@ -10,7 +10,9 @@ class HouseHuntersController < ApplicationController
   # GET /house_hunters/1
   # GET /house_hunters/1.json
   def show
+    if logged_in?
     @house_hunter = HouseHunter.find_by(id: current_user.id)
+      end
   end
 
   # GET /house_hunters/new
@@ -30,8 +32,7 @@ class HouseHuntersController < ApplicationController
     respond_to do |format|
       if @house_hunter.save
         log_in @house_hunter, "House Hunter"
-        flash[:notice]  = 'Welcome @house_hunter.name!'
-        format.html { redirect_to @house_hunter }
+        format.html { redirect_to @house_hunter, notice: "Welcome #{@house_hunter.name!}" }
         format.json { render :show, status: :created, location: @house_hunter }
       else
         format.html { render :new }

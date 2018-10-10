@@ -24,7 +24,10 @@
 
     <% @houses.each do |house| %>
     <% if session[:role] == 'Realtor' && current_user.company_id == house.company_id || session[:role] == 'House Hunter' || session[:role] == 'Admin' %>
-      <tr>
+    <% if current_user.company_id == 1 && (session[:role] == 'Admin' || session[:role] == 'Realtor')  %>
+    <p> You can't view any houses. Register to or create a company first</p>
+          <% end %>
+        <tr>
         <td scope="row"><%= house.name %></td>
         <td scope="row"><%= house.location %></td>
         <td scope="row"><%= house.company.name %></td>
@@ -61,6 +64,7 @@
   <% if session[:role] == 'Realtor' || session[:role] == 'Admin' %>
     <%= link_to "New House", { :controller => "houses", :action => "new" } %>
     <% end %>
+  <a href="javascript:history.back()">Back</a>
   <% else %>
   <script type="text/javascript">
       window.location.href="/login"  // put your correct path in a string here

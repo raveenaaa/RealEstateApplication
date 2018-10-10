@@ -23,7 +23,7 @@ class HousesController < ApplicationController
   # GET /houses/new
   def new
     @house = House.new
-    if session[:role] == 'Realtor'
+    if logged_in? && session[:role] == 'Realtor'
     @company = Company.find_by(id: current_user.company_id)
       end
   end

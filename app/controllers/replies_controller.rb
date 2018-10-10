@@ -10,21 +10,27 @@ class RepliesController < ApplicationController
   # GET /replies/1
   # GET /replies/1.json
   def show
+    if logged_in?
     @realtor = Realtor.find_by(email: current_user.email)
     @inquiry = Inquiry.find_by(id: params[:inquiry])
+      end
   end
 
   # GET /replies/new
   def new
     @reply = Reply.new
     @inquiry = Inquiry.includes(:house, :house_hunter).find_by(id: params[:inquiry_id])
+    if logged_in?
     session[:inquiry_id] = params[:inquiry_id]
     @realtor = Realtor.find_by(email: current_user.email)
+      end
   end
 
   # GET /replies/1/edit
   def edit
+    if logged_in?
     @realtor = Realtor.find_by(email: current_user.email)
+      end
   end
 
   # POST /replies

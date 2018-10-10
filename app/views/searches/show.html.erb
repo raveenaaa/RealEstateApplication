@@ -3,12 +3,12 @@
   <p> No records found</p>
 <% else %>
   <% @search.search_houses.each do |c| %>
-
     <div class="div">
       <h1><%= c.name %></h1>
-      <%= link_to 'Favourite', "/favourites/add/#{current_user.id}/#{c.id}"%>
-      <%#= link_to 'Favourite', 'new_search_path'%>
-      <p>location: <%= c.location %></p>
+      <% if session[:role] != 'Realtor' %>
+      <%= link_to 'Add to Favourites', "/favourites/add/#{current_user.id}/#{c.id}" %>
+        <% end %>
+      <p>Location: <%= c.location %></p>
       <p>Company: <%= c.company.name %></p>
       <p> Area: <%= c.area %></p>
       <p> Area: <%= c.area %></p>
@@ -22,4 +22,4 @@
     </div>
   <% end %>
 <% end %>
-<p><%= link_to 'Back', new_search_path  %></p>
+<a href="javascript:history.back()">Back</a>

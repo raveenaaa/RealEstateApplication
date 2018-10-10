@@ -1,5 +1,4 @@
 <% if logged_in?  %>
-
 <p id="notice"><%= notice %></p>
 <p>
   <strong>House Hunter:</strong>
@@ -10,7 +9,7 @@
   <strong>House:</strong>
   <%= @favourite.house.name %>
 </p>
-<%= link_to 'Back', favourites_path %>
+  <a href="javascript:history.back()">Back</a>
 <% else %>
   <script type="text/javascript">
       window.location.href="/login"  //Redirect to login for unlogged in users

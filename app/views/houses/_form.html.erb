@@ -23,7 +23,7 @@
   <%= select("house", "company_id", Company.all.collect{ |c| [ c.name, c.id ]}, { include_blank: true }) %>
 <% else %>
     <%= form.label "Company" %>
-    <%= select("house", "company_id", Company.all.collect{ |c| [ c.name, c.id ] if c.id == current_user.company.id}) %>
+      <%= form.select :company_id, [[current_user.company.name, current_user.company_id]] %>
     <% end %>
 
 <%# -------------LOCATION------------ %>
@@ -75,10 +75,13 @@
   </div>
 
   <%# -------------REALTOR CONTACT------------ %>
-  <div class="field">
-    <%= form.label "Realtor to Contact" %>
+  <% if session[:role] == 'Admin' %>
+    <%= form.label "Realtor" %>
     <%= select("house", "realtor_id", Realtor.all.collect{ |c| [ c.name, c.id ]}, { include_blank: true }) %>
-  </div>
+    <% else %>
+    <%= form.label "Realtor" %>
+    <%= form.select :realtor_id, [[current_user.name, current_user.id]] %>
+  <% end %>
 
    <%# -------------Image upload----------------- %>
   <div class="field">

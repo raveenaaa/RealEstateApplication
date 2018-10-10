@@ -4,13 +4,17 @@ class AdminsController < ApplicationController
   # GET /admins/1
   # GET /admins/1.json
   def show
+    if logged_in?
     @realtor = Realtor.find_by(id: current_user.id)
     @house_hunter = HouseHunter.find_by(id: current_user.id)
+      end
   end
 
   # GET /admins/new
   def new
+    if logged_in?
     @admin = Admin.new
+      end
   end
 
   # GET /admins/1/edit
