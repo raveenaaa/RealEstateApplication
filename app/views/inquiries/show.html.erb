@@ -16,7 +16,7 @@
     <% unless session[:role] == 'Realtor' %>
 <%= link_to 'Edit', edit_inquiry_path(@inquiry) %>
       <% end %>
-<%= link_to 'Back', current_user %>
+    <a href="javascript:history.back()">Back</a>
 <% else %>
     <% if session[:role] == 'Realtor' %>
       <script type="text/javascript">

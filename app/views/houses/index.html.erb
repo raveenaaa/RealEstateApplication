@@ -61,6 +61,7 @@
   <% if session[:role] == 'Realtor' || session[:role] == 'Admin' %>
     <%= link_to "New House", { :controller => "houses", :action => "new" } %>
     <% end %>
+  <a href="javascript:history.back()">Back</a>
   <% else %>
   <script type="text/javascript">
       window.location.href="/login"  // put your correct path in a string here

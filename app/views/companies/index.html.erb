@@ -1,8 +1,6 @@
 <% if logged_in? %>
 <p id="notice"></p>
-
 <h1>Companies</h1>
-
   <div class="jumbotron">
     <table class="table">
       <thead class="thead-dark">
@@ -43,6 +41,7 @@
 <br>
 <% unless session[:role] == 'House Hunter' %>
 <%= link_to 'New Company', new_company_path %>
+    <a href="javascript:history.back()">Back</a>
     <% end %>
   <% else %>
     <script type="text/javascript">

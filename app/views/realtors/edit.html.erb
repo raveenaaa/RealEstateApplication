@@ -9,7 +9,7 @@
 <%= render 'form', realtor: @realtor %>
 
 <%= link_to 'Show', @realtor %> |
-<%= link_to 'Back', realtors_path %>
+    <a href="javascript:history.back()">Back</a>
 <% end %>
 <% else %>
   <script type="text/javascript">

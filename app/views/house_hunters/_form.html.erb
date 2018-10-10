@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+  <%# ----------------HOUSE HUNTER NAME---------------%>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :house_hunter_name %>
+  </div>
+
   <%# ----------------EMAIL---------------%>
   <div class="field">
     <%= form.label :email %>
@@ -23,11 +29,6 @@
   <%= form.password_field :password, id: :realtor_password%>
   <%= form.label :password_confirmation, "Confirmation" %>
   <%= form.password_field :password_confirmation, id: :house_hunter_password %>
-  </div>
-  <%# ----------------HOUSE HUNTER NAME---------------%>
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :house_hunter_name %>
   </div>
 
   <%# ----------------PHONE---------------%>

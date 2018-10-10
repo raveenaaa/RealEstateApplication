@@ -7,9 +7,8 @@
 <h1>Editing House Hunter</h1>
 
 <%= render 'form', house_hunter: @house_hunter %>
-
 <%= link_to 'Show', @house_hunter %> |
-<%= link_to 'Back', house_hunters_path %>
+    <a href="javascript:history.back()">Back</a>
   <% end %>
 <% else %>
   <script type="text/javascript">
