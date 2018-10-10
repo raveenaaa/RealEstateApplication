@@ -38,7 +38,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.13'
+  # gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
 end
 
@@ -62,3 +62,15 @@ gem 'carrierwave'
 gem 'bcrypt', '3.1.12'
 # #rmagick to resize the image
 #gem 'rmagick'
+#
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+# gem 'shoulda-matchers'
+
+group :test do
+  # gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
+end
