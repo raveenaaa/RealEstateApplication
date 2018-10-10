@@ -4,12 +4,20 @@
         window.location.href="/realtors/<%= current_user.id %>"
     </script>
   <% else %>
-<h1>New Inquiry</h1>
+    <h1>New Inquiry</h1>
 
-<%= render 'form', inquiry: @inquiry %>
+    <%= render 'form', inquiry: @inquiry %>
 
-<%= link_to 'Back', current_user %>
-    <% end %>
+    <br>
+    <div class="container">
+      <div class="col-md-4 col-md-offset-5">
+        <%= link_to 'Back', current_user , class: "btn btn-default" %>
+      </div>
+    </div>
+
+
+    <%#= link_to 'Back', current_user %>
+  <% end %>
 <% else %>
   <script type="text/javascript">
       window.location.href="/login"  //Redirect to login for unlogged in users

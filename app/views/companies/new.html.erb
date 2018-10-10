@@ -4,11 +4,16 @@
         window.location.href="/house_hunters/<%= current_user.id %>"  // put your correct path in a string here
     </script>
   <% else %>
-<h1>New Company</h1>
+    <h1>New Company</h1>
 
-<%= render 'form', company: @company %>
+    <%= render 'form', company: @company %>
+    <br>
+    <div class="container">
+      <div class="col-md-4 col-md-offset-5">
+        <%= link_to 'Back', companies_path, class: "btn btn-default"  %>
+      </div>
+    </div>
 
-<%= link_to 'Back', companies_path %>
   <% end %>
 <% else %>
   <script type="text/javascript">

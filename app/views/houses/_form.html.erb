@@ -4,89 +4,98 @@
       <h2><%= pluralize(house.errors.count, "error") %> prohibited this house from being saved:</h2>
 
       <ul>
-      <% house.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% house.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <%# -------------NAME------------ %>
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :house_name %>
+  <div class="container">
+    <div class="col-md-4 col-md-offset-3">
+      <div class="row form">
+
+        <%# -------------NAME------------ %>
+        <div class="field form-group">
+          <%= form.label :name %>
+          <%= form.text_field :name, id: :house_name, class: 'form-control', placeholder: "Enter Name"   %>
+        </div>
+
+        <%# -------------COMPANY------------ %>
+        <%= form.label "Company" %>
+        <%= select("house", "company_id", Company.all.collect{ |c| [ c.name, c.id ]}, { include_blank: true }, {class: "form-control"}) %>
+
+        <%# -------------LOCATION------------ %>
+        <div class="field form-group">
+          <%= form.label :location %>
+          <%= form.text_field :location, id: :house_location, class: 'form-control', placeholder: "Enter location"   %>
+        </div>
+
+        <%# -------------SQUARE FOOTAGE----------- %>
+        <div class="field form-group">
+          <%= form.label :area %>
+          <%= form.text_field :area, id: :house_area, class: 'form-control', placeholder: "Enter area"   %>
+        </div>
+
+        <%# -------------YEAR------------ %>
+        <div class="field form-group">
+          <%= form.label :year %>
+          <%= form.text_field :year, id: :house_year, class: 'form-control', placeholder: "Enter year"   %>
+        </div>
+
+        <%# -------------STYLE------------ %>
+        <div class="field form-group">
+          <%= form.label :style %>
+          <%= form.select :style, ['Apartment', 'Single Family', 'Condo'], { include_blank: true }, id: :house_style, class: "form-control"%>
+        </div>
+
+        <%# -------------PRICE------------ %>
+        <div class="field">
+          <%= form.label :price %>
+          <%= form.text_field :price, id: :house_price, class: 'form-control', placeholder: "Enter price"   %>
+        </div>
+
+        <%# -------------FLOORS------------ %>
+        <div class="field">
+          <%= form.label :floors %>
+          <%= form.number_field :floors, id: :house_floors, min: 0 , class: 'form-control', placeholder: "Enter floor size"  %>
+        </div>
+
+        <%# -------------BASEMENT------------ %>
+        <div class="field form-group">
+          <%= form.label :basement %>
+          <%= form.select :basement, ['Yes', 'No'], { include_blank: true }, id: :house_basement, class: "form-control"%>
+        </div>
+
+        <%# --------------OWNER -------------- %>
+        <div class="field">
+          <%= form.label :owner %>
+          <%= form.text_field :owner, id: :house_owner , class: 'form-control', placeholder: "Enter Owner"  %>
+        </div>
+
+        <%# -------------REALTOR CONTACT------------ %>
+        <div class="field">
+          <%= form.label "Realtor to Contact" %>
+          <%= select("house", "realtor_id", Realtor.all.collect{ |c| [ c.name, c.id ]}, { include_blank: true }, {class: "form-control"}) %>
+        </div>
+
+        <%# -------------BUYER'S ID----------------- %>
+        <div class="field form-group">
+          <%= form.label :buyers %>
+          <%= form.text_field :buyers, id: :house_buyers , class: 'form-control', placeholder: "Enter Buyer"  %>
+        </div>
+
+        <%# -------------Image upload----------------- %>
+        <div class="field form-group">
+          <%= form.label "Upload House Image"%>
+          <%= form.file_field :image , class: 'btn btn-default'%>
+        </div>
+        <br>
+        <div class="actions form-group">
+          <%= form.submit 'Create House', class: 'btn btn-primary'%>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <%# -------------COMPANY------------ %>
-  <% if session[:role] == 'Admin' %>
-  <%= form.label "Company" %>
-  <%= select("house", "company_id", Company.all.collect{ |c| [ c.name, c.id ]}, { include_blank: true }) %>
-<% else %>
-    <%= form.label "Company" %>
-    <%= select("house", "company_id", Company.all.collect{ |c| [ c.name, c.id ] if c.id == current_user.company.id}) %>
-    <% end %>
-
-<%# -------------LOCATION------------ %>
-  <div class="field">
-    <%= form.label :location %>
-    <%= form.text_field :location, id: :house_location %>
-  </div>
-
-  <%# -------------SQUARE FOOTAGE----------- %>
-  <div class="field">
-    <%= form.label :area %>
-    <%= form.text_field :area, id: :house_area %>
-  </div>
-
-  <%# -------------YEAR------------ %>
-  <div class="field">
-    <%= form.label :year %>
-    <%= form.text_field :year, id: :house_year %>
-  </div>
-
-  <%# -------------STYLE------------ %>
-  <div class="field">
-    <%= form.label :style %>
-    <%= form.select :style, ['Apartment', 'Single Family', 'Condo'], { include_blank: true }, id: :house_style%>
-  </div>
-
-  <%# -------------PRICE------------ %>
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price, id: :house_price %>
-  </div>
-
-  <%# -------------FLOORS------------ %>
-  <div class="field">
-    <%= form.label :floors %>
-    <%= form.number_field :floors, id: :house_floors, min: 0 %>
-  </div>
-
-  <%# -------------BASEMENT------------ %>
-  <div class="field">
-    <%= form.label :basement %>
-    <%= form.select :basement, ['Yes', 'No'], { include_blank: true }, id: :house_basement%>
-  </div>
-
-  <%# --------------OWNER -------------- %>
-  <div class="field">
-    <%= form.label :owner %>
-    <%= form.text_field :owner, id: :house_owner %>
-  </div>
-
-  <%# -------------REALTOR CONTACT------------ %>
-  <div class="field">
-    <%= form.label "Realtor to Contact" %>
-    <%= select("house", "realtor_id", Realtor.all.collect{ |c| [ c.name, c.id ]}, { include_blank: true }) %>
-  </div>
-
-   <%# -------------Image upload----------------- %>
-  <div class="field">
-    <%= form.label "Upload House Image"%>
-    <%= form.file_field :image %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

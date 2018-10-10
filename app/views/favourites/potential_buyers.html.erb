@@ -4,36 +4,34 @@
         window.location.href="/house_hunters/<%= current_user.id %>"  // put your correct path in a string here
     </script>
   <% else %>
-<p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
 
-<h1>Potential Buyers</h1>
+    <h1>Potential Buyers</h1>
 
-    <div class="jumbotron">
-      <table class="table">
-        <thead class="thead-dark">
-  <tr>
-    <th scope="col">Name</th>
-    <th scope="col">Email</th>
-    <th scope="col">Phone</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th colspan="3"></th>
+      </tr>
+      </thead>
 
-  <tbody>
-  <% @favourites.each do |favourite| %>
-    <tr>
-      <td scope="row"><%= favourite.house_hunter.name %></td>
-      <td scope="row"><%= favourite.house_hunter.email %></td>
-      <td scope="row"><%= favourite.house_hunter.phone %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-    </div>
+      <tbody>
+      <% @favourites.each do |favourite| %>
+        <tr>
+          <td><%= favourite.house_hunter.name %></td>
+          <td><%= favourite.house_hunter.email %></td>
+          <td><%= favourite.house_hunter.phone %></td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'Back', houses_path %>
+    <%= link_to 'Back', houses_path, class: "btn btn-default" %>
   <% end %>
 <% else %>
   <script type="text/javascript">

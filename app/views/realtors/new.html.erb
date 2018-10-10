@@ -1,9 +1,14 @@
 <% if logged_in? && session[:role] =='Admin' || !logged_in? %>
-<h1>New Realtor</h1>
+  <h1>New Realtor</h1>
 
-<%= render 'form', realtor: @realtor %>
+  <%= render 'form', realtor: @realtor %>
+  <br>
+  <div class="container">
+    <div class="col-md-4 col-md-offset-5">
+      <%= link_to 'Back', realtors_path, class: "btn btn-default" %>
+    </div>
+  </div>
 
-<%= link_to 'Back', realtors_path %>
 <% else %>
   <script type="text/javascript">
       window.location.href="/login"  //Redirect to login for unlogged in users

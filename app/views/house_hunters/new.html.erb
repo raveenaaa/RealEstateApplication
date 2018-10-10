@@ -1,9 +1,18 @@
 <% if logged_in? && session[:role] =='Admin' || !logged_in? %>
-<h1>New House Hunter</h1>
+  <h1>New House Hunter</h1>
 
-<%= render 'form', house_hunter: @house_hunter %>
+  <%= render 'form', house_hunter: @house_hunter %>
 
-<%= link_to 'Back', '/login' %>
+<%#= link_to 'Back', '/login' %>
+
+  <br>
+  <div class="container">
+    <div class="col-md-4 col-md-offset-5">
+      <%= link_to 'Back', house_hunters_path, class: "btn btn-default" %>
+    </div>
+  </div>
+
+
 <% else %>
   <script type="text/javascript">
       window.location.href="/login"  //Redirect to login for unlogged in users
