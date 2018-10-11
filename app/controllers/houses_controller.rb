@@ -39,7 +39,7 @@ class HousesController < ApplicationController
     if session[:role] == 'Realtor'
     val[:company_id] = current_user.company_id
     end
-    @house = House.includes(:company, :realtor).new(house_params)
+    @house = House.includes(:company, :realtor).new(val)
     respond_to do |format|
       if @house.save
         format.html { redirect_to @house, notice: 'House was successfully created.' }
