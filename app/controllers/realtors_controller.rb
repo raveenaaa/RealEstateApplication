@@ -40,7 +40,7 @@ class RealtorsController < ApplicationController
         log_in @realtor, "Realtor"
           flash[:notice] = "Welcome #{@realtor.name}"
         end
-        format.html { redirect_to @current_user  }
+        format.html { redirect_to current_user  }
         format.json { render :show, status: :created, location: @realtor }
        else
         format.html { render :new }
