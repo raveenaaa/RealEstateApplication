@@ -35,7 +35,7 @@ class HouseHuntersController < ApplicationController
           log_in @house_hunter, "House Hunter"
           flash[:notice] = "Welcome #{@house_hunter.name}"
         end
-        format.html { redirect_to @house_hunter  }
+        format.html { redirect_to @current_user  }
         format.json { render :show, status: :created, location: @house_hunter }
       else
         format.html { render :new }
