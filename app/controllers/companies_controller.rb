@@ -28,9 +28,7 @@ class CompaniesController < ApplicationController
 
     respond_to do |format|
       if @company.save
-        format.html { if session[:role] == 'Realtor'
-                        redirect_to "/realtors/update_profile/#{@company.id}"
-                      else redirect_to @company, notice: 'Company was successfully created.' end }
+        format.html { redirect_to @company, notice: 'Company was successfully created.' }
         format.json { render :show, status: :created, location: @company }
           else
         format.html { render :new }
