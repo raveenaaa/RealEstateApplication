@@ -1,3 +1,5 @@
+Admin Credentials:
+admin@gmail.com   abc123
 Website based on ruby on rails:
 
 This website involves 3 user roles- Admin, realtor and House Hunter.
@@ -15,4 +17,4 @@ How to run the test suite
 
 Services (Search and add house details for house hunters)
 
-Deployment- Using heroku OR Amazon web services
+Deployment- Using heroku 
