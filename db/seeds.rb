@@ -13,19 +13,28 @@ admin.password = 'abc123'
 admin.password_confirmation = 'abc123'
 admin.save!
 
-realtor = Realtor.new
-realtor.email = 'ravz@gmail.com'
-realtor.name = 'Raveena'
-realtor.password = 'abc123'
-realtor.password_confirmation = 'abc123'
-realtor.phone = 9845785125
-realtor.save!
+company = Company.new
+company.name = 'Test'
+company.website = 'test.com'
+company.address = 'Raleigh'
+company.size = 2000
+company.year = 1990
+company.revenue = 200000
+company.synopsis = 'Test'
 
 house_hunter = HouseHunter.new
-house_hunter.email = 'ravz@gmail.com'
-house_hunter.name = 'Raveena'
+house_hunter.email = 'admin@gmail.com'
+house_hunter.name = 'Admin'
 house_hunter.password = 'abc123'
 house_hunter.password_confirmation = 'abc123'
 house_hunter.phone = 9845785125
 house_hunter.preferred = 'email'
-realtor.save!
+house_hunter.save!
+
+realtor = Realtor.new
+realtor.email = 'admin@gmail.com'
+realtor.name = 'Admin'
+realtor.password = 'abc123'
+realtor.password_confirmation = 'abc123'
+realtor.phone = 9845782563
+realtor.company_id = 1
