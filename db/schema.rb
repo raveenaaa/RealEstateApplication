@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181006044823) do
+ActiveRecord::Schema.define(version: 20181029232327) do
 
   create_table "admins", force: :cascade do |t|
     t.string "name"
@@ -45,9 +45,9 @@ ActiveRecord::Schema.define(version: 20181006044823) do
     t.string "email"
     t.string "name"
     t.string "phone"
+    t.string "preferred"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "preferred"
     t.string "password_digest"
   end
 
@@ -57,16 +57,16 @@ ActiveRecord::Schema.define(version: 20181006044823) do
     t.string "year"
     t.string "style"
     t.string "price"
-    t.string "floors"
+    t.integer "floors"
     t.string "basement"
     t.string "owner"
     t.string "buyers"
     t.integer "company_id"
-    t.integer "realtor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
     t.string "image"
+    t.integer "realtor_id"
     t.index ["company_id"], name: "index_houses_on_company_id"
     t.index ["realtor_id"], name: "index_houses_on_realtor_id"
   end
@@ -75,16 +75,11 @@ ActiveRecord::Schema.define(version: 20181006044823) do
     t.string "subject"
     t.text "message"
     t.integer "house_hunter_id"
-    t.integer "house_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "house_id"
     t.index ["house_hunter_id"], name: "index_inquiries_on_house_hunter_id"
     t.index ["house_id"], name: "index_inquiries_on_house_id"
-  end
-
-  create_table "names", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "realtors", force: :cascade do |t|
