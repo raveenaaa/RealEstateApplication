@@ -1,5 +1,11 @@
 Admin Credentials:
 admin@gmail.com   abc123
+
+House Hunter credentials:
+prachi@gmail.com  abc123
+
+Realtor credentials:
+ravz@gmail.com  abc123
 Website based on ruby on rails:
 
 This website involves 3 user roles- Admin, realtor and House Hunter.
@@ -13,8 +19,5 @@ Rails version - 5.1.2
 
 Database - sqlite3
 
-How to run the test suite
-
-Services (Search and add house details for house hunters)
-
 Deployment- Using heroku 
+Deployment link: https://intense-sierra-79578.herokuapp.com/
